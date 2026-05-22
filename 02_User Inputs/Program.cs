@@ -34,6 +34,8 @@ namespace _02_User_Inputs
             Console.WriteLine("Age: " + age);
             Console.WriteLine("Speed: " + speed);
             Console.WriteLine("Alive: " + isAlive);
+
+            Console.ReadLine();
         }
     }
 }
