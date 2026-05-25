@@ -10,6 +10,7 @@ namespace _03_If_Else
     {
         static void Main(string[] args)
         {
+            /*
             int year = 2016;
 
             if (year % 4 == 0)
@@ -36,6 +37,9 @@ namespace _03_If_Else
             }
 
             Console.ReadLine(); // ✅ moved outside — always runs
+            */
+
+
         }
     }
 }
