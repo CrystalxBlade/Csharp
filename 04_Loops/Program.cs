@@ -10,6 +10,8 @@ namespace _04_Loops
     {
         static void Main(string[] args)
         {
+            /*
+              
             int num = 5279;
             int count = 0;
 
@@ -30,6 +32,20 @@ namespace _04_Loops
                 }
             }
             Console.WriteLine($"Number of digits : {count}");
+            */
+
+            int num = 5;
+            int factorial = 1;
+
+            if(num < 0)
+            {
+                Console.WriteLine("Factorial does not exist for negative numbers");
+            }
+            else if(num == 0)
+            {
+                Console.WriteLine("Factorial");
+            }
+
             Console.ReadLine();
         }
     }
