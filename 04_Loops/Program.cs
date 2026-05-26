@@ -12,6 +12,8 @@ namespace _04_Loops
         {
             /*
               
+            // Count Digits
+            
             int num = 5279;
             int count = 0;
 
@@ -32,7 +34,9 @@ namespace _04_Loops
                 }
             }
             Console.WriteLine($"Number of digits : {count}");
-            */
+            
+
+            // Factorial
 
             int num = 5;
             int factorial = 1;
@@ -43,7 +47,7 @@ namespace _04_Loops
             }
             else if(num == 0)
             {
-                Console.WriteLine("Factorial");
+                Console.WriteLine("Factorial of 0 is 1");
             }
             else
             {
@@ -53,6 +57,35 @@ namespace _04_Loops
                     Console.WriteLine(factorial);
                 }
                 Console.WriteLine($"Factorial of {num} is : {factorial}");
+            }
+
+            */
+
+            int num = 12321;
+            int original = num;
+            int reversed = 0;
+
+            if(num < 0)
+            {
+                Console.WriteLine("Negative numbers are not palindrome");
+            }
+            else
+            {
+                while(num > 0)
+                {
+                    int lastdigit = num % 10;
+                    reversed = reversed * 10 + lastdigit;
+                    num = num / 10;
+                }
+
+                if (original == reversed)
+                {
+                    Console.WriteLine($"{original} is a palindrome");
+                }
+                else
+                {
+                    Console.WriteLine($"{original} is not a palindrom");
+                }
             }
 
             Console.ReadLine();
