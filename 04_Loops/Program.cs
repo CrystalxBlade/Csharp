@@ -88,8 +88,6 @@ namespace _04_Loops
                 }
             }
 
-            */
-
             // Largest digit 
 
             int num = 47392;
@@ -117,6 +115,40 @@ namespace _04_Loops
                 }
                 Console.Write($"Largest digit is : {largest}");
             }
+
+            // Fibonacci
+
+            int n = 10, first = 0, second = 1, count = 1; 
+
+            if(n <= 0)
+            {
+                Console.WriteLine("Enter a positive number");
+            }
+            else if(n == 1)
+            {
+                Console.WriteLine("Fibonacci Series 0");
+            }
+            else
+            {
+                Console.Write("Fibonacci Series: ");
+
+                while(count <= n)
+                {
+                    Console.Write($"{first} ");
+
+                    int next = first + second;
+                    first = second;
+                    second = next;
+
+                    count++;
+                }
+
+            }
+
+            */
+
+
+
 
             Console.ReadLine();
         }
