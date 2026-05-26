@@ -59,7 +59,7 @@ namespace _04_Loops
                 Console.WriteLine($"Factorial of {num} is : {factorial}");
             }
 
-            */
+            // Palindrome
 
             int num = 12321;
             int original = num;
@@ -86,6 +86,36 @@ namespace _04_Loops
                 {
                     Console.WriteLine($"{original} is not a palindrom");
                 }
+            }
+
+            */
+
+            // Largest digit 
+
+            int num = 47392;
+            int largest = 0;
+
+            if(num < 0)
+            {
+                num = -num;
+            }
+
+            if(num == 0)
+            {
+                Console.WriteLine("Largest digit is: 0");
+            }
+            else
+            {
+                while(num > 0)
+                {
+                    int lastdigit = num % 10;
+                    if(lastdigit > largest)
+                    {
+                        largest = lastdigit;
+                    }
+                    num = num / 10;
+                }
+                Console.Write($"Largest digit is : {largest}");
             }
 
             Console.ReadLine();
