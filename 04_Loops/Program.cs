@@ -45,6 +45,15 @@ namespace _04_Loops
             {
                 Console.WriteLine("Factorial");
             }
+            else
+            {
+                for(int i = 1; i <= num; i++)
+                {
+                    factorial *= i;
+                    Console.WriteLine(factorial);
+                }
+                Console.WriteLine($"Factorial of {num} is : {factorial}");
+            }
 
             Console.ReadLine();
         }
