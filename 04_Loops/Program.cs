@@ -145,7 +145,7 @@ namespace _04_Loops
 
             }
 
-            */
+            // Check Prime number
 
             int num = 7;
             bool isPrime = true;
@@ -177,8 +177,26 @@ namespace _04_Loops
                 Console.WriteLine($"{num} is not a prime");
             }
 
+            // Print all Prime number 1 to 100
+            
+            for(int num = 1; num <= 100; num++)
+            {
+                int count = 0;
 
+                for(int i = 1; i <= num; i++)
+                {
+                    if(num % i == 0)
+                    {
+                        count++;
+                    }
+                }
+                if(count == 2)
+                {
+                    Console.WriteLine(num);
+                }
+            }
 
+            */
             Console.ReadLine();
         }
     }
