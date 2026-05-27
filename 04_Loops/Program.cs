@@ -164,10 +164,18 @@ namespace _04_Loops
                         isPrime = false;
                         break;
                     }
+                    i++;
                 }
             }
 
-            for()
+            if (isPrime)
+            {
+                Console.WriteLine($"{num} is a prime");
+            }
+            else
+            {
+                Console.WriteLine($"{num} is not a prime");
+            }
 
 
 
