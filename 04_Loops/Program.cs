@@ -147,6 +147,27 @@ namespace _04_Loops
 
             */
 
+            int num = 7;
+            bool isPrime = true;
+            int i = 2;
+
+            if(num <= 1)
+            {
+                isPrime = false;
+            }
+            else
+            {
+                while(i < num)
+                {
+                    if(num % i == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+
+            for()
 
 
 
