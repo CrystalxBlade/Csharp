@@ -176,6 +176,7 @@ namespace _04_Loops
             {
                 Console.WriteLine($"{num} is not a prime");
             }
+            
 
             // Print all Prime number 1 to 100
             
