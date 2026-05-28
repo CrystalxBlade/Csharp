@@ -10,6 +10,8 @@ namespace _07_Functions
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Functions");
+            Console.ReadLine();
         }
     }
 }
