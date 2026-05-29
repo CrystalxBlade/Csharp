@@ -10,6 +10,12 @@ namespace _08_Static_Non_Static
     {
         static void Main(string[] args)
         {
+            Welcome();
+        }
+
+        static void Welcome()
+        {
+            Console.WriteLine("Welcome Blade");
         }
     }
 }
