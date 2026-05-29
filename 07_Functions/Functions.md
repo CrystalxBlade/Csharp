@@ -34,15 +34,15 @@ Returns back
 ```
 
 ## 🔥 Types of Functions
-## 1️⃣ Function with no return value
+### 1️⃣ Function with no return value
 
-### Uses:
+Uses:
 
 ```
 void
 
 ```
-## Example:
+Example:
 
 ```
 void PrintName()
@@ -52,9 +52,9 @@ void PrintName()
 
 ```
 
-## 2️⃣ Function with return value
+### 2️⃣ Function with return value
 
-### Returns something back.
+- Returns something back.
 
 ```
 int Add()
@@ -63,16 +63,16 @@ int Add()
 }
 
 ```
-### Usage:
+Usage:
 
 ```
 int result = Add();
 
 ```
 
-## 🔷 Parameters
+### 🔷 Parameters
 
-### Functions can take input.
+Functions can take input.
 
 ```
 void Greet(string name)
@@ -81,14 +81,14 @@ void Greet(string name)
 }
 
 ```
-### Call:
+Call:
 
 ```
 Greet("Blade");
 
 ```
 
-## 🔷 Function with Parameters + Return
+### 🔷 Function with Parameters + Return
 
 ```
 int Add(int a, int b)
@@ -97,13 +97,13 @@ int Add(int a, int b)
 }
 
 ```
-### Call:
+Call:
 
 ```
 int sum = Add(2, 3);
 
 ```
-## 🔥 Main Function Types You Should Learn
+### 🔥 Main Function Types You Should Learn
 
 | Type                    | Example                   |
 | ----------------------- | ------------------------- |
