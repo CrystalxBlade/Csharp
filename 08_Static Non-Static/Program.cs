@@ -38,4 +38,8 @@ namespace _08_Static_Non_Static
             Console.WriteLine("Welcome Blade");
         }
     }
+
+
+    // static = belongs to class 
+    // Non static = belongs to object
 }
