@@ -10,6 +10,9 @@ namespace _06_Ref_n_Out
     {
         static void Main(string[] args)
         {
+         
+
+            Console.ReadLine();
         }
     }
 }
