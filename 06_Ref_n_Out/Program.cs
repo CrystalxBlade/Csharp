@@ -8,11 +8,13 @@ namespace _06_Ref_n_Out
 {
     class Program
     {
-        /*
+        
+        /*                  // ref
+                            
          
         static void Main(string[] args)
         {
-            int num = 20;
+            int num = 20;                    // must initialize first
 
             something(ref num);
 
@@ -24,16 +26,16 @@ namespace _06_Ref_n_Out
         static void something(ref int a)
         {
             a += 10;
-            Console.WriteLine($" method value = {a}");
         }
 
         */
-
+        
+                            // out
 
         /*
         static void Main(string[] args)
         {
-            int x;
+            int x;                          // no initialization needed
             GetValue(out x);
             Console.WriteLine(x);
 
@@ -42,7 +44,7 @@ namespace _06_Ref_n_Out
 
         static void GetValue(out int x)
         {
-            x = 5;
+            x = 5;                         // must assign inside method
         }
         */
     }
