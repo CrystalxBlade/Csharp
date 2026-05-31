@@ -8,6 +8,8 @@ namespace _06_Ref_n_Out
 {
     class Program
     {
+        /*
+         
         static void Main(string[] args)
         {
             int num = 20;
@@ -24,5 +26,24 @@ namespace _06_Ref_n_Out
             a += 10;
             Console.WriteLine($" method value = {a}");
         }
+
+        */
+
+
+        /*
+        static void Main(string[] args)
+        {
+            int x;
+            GetValue(out x);
+            Console.WriteLine(x);
+
+            Console.ReadLine();
+        }
+
+        static void GetValue(out int x)
+        {
+            x = 5;
+        }
+        */
     }
 }
