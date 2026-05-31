@@ -10,7 +10,7 @@ namespace _06_Ref_n_Out
     {
         static void Main(string[] args)
         {
-         
+            Console.WriteLine("Ref out");
 
             Console.ReadLine();
         }
