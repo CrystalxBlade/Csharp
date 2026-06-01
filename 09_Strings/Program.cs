@@ -100,8 +100,17 @@ namespace _09_Strings
 
 
             --------------  Remove --------------
-            */
+            
 
+            string message = "Crystal x Blade";
+
+            message = message.Remove(7);          // Crystal
+            message = message.Remove(2, 4);       // Crl x Blade
+            Console.WriteLine(message);       
+
+
+            --------------  Remove --------------
+             */
 
             Console.ReadLine();
         }
