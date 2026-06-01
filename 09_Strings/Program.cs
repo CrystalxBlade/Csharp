@@ -74,9 +74,15 @@ namespace _09_Strings
 
 
             --------------  Insert --------------
+
+            
+            string message = " x Blade";
+
+            string result = message.Insert(0, "Crystal");
+            Console.Write(result);
+
+
             */
-
-
 
             Console.ReadLine();
         }
