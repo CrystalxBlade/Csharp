@@ -109,10 +109,18 @@ namespace _09_Strings
             Console.WriteLine(message);       
 
 
-            --------------  Remove --------------
-             */
+            --------------  Substring --------------
+
+             
+            string message = "Crystal x Blade";
+            message = message.Substring(7);
+
+            Console.WriteLine(message);
 
             Console.ReadLine();
+
+
+            */
         }
     }
 }
