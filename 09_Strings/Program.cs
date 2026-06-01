@@ -82,7 +82,18 @@ namespace _09_Strings
             Console.Write(result);
 
 
+            --------------  Replace --------------
+
+
+            string message = "Crystal x Blade";
+
+            message = message.Replace("Crystal", "Star");
+            Console.WriteLine(message);
+
+
             */
+
+
 
             Console.ReadLine();
         }
