@@ -39,6 +39,7 @@ namespace _09_Strings
                 Console.WriteLine("Empty string");
             }
 
+
             --------------  Equals --------------
             
 
@@ -54,9 +55,29 @@ namespace _09_Strings
                 Console.WriteLine("Different texts");
             }
 
-            --------------  Empty --------------
 
+            --------------  Contains --------------
+
+
+            string message = "This is Crystal x Blade";
+            Console.Write("Type something to search: ");
+
+            string compare = Console.ReadLine();
+            if(message.Contains(compare))
+            {
+                Console.WriteLine($"Found the word {compare}");
+            }
+            else
+            {
+                Console.WriteLine("Not found");
+            }
+
+
+            --------------  Insert --------------
             */
+
+
+
             Console.ReadLine();
         }
     }
