@@ -91,8 +91,16 @@ namespace _09_Strings
             Console.WriteLine(message);
 
 
-            */
+            --------------  IndexOf --------------
 
+
+            string message = "Crystal x Blade";
+
+            Console.WriteLine(message.IndexOf("x"));
+
+
+            --------------  Remove --------------
+            */
 
 
             Console.ReadLine();
