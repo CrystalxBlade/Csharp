@@ -10,7 +10,54 @@ namespace _09_Strings
     {
         static void Main(string[] args)
         {
+            /*
+             
+            --------------  Concat --------------
 
+            string first = "Crystalx";
+            string second = "Blade";
+
+            string final = string.Concat(first, second);
+            Console.WriteLine(final);
+
+            string newSum = string.Concat("Crystalx", "Blade");
+            Console.WriteLine(newSum);
+
+
+            --------------  Empty --------------
+
+
+            Console.Write("Enter your name: ");
+            string name = Console.ReadLine();
+
+            if(name != string.Empty)
+            {
+                Console.WriteLine($"Your name is: {name}");
+            }
+            else
+            {
+                Console.WriteLine("Empty string");
+            }
+
+            --------------  Equals --------------
+            
+
+            string text1 = "Crystal";
+            string text2 = "Crystal";
+
+            if(text1.Equals(text2))
+            {
+                Console.WriteLine($"{text1} - same texts");
+            }
+            else
+            {
+                Console.WriteLine("Different texts");
+            }
+
+            --------------  Empty --------------
+
+            */
+            Console.ReadLine();
         }
     }
 }
