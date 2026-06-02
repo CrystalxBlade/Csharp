@@ -123,7 +123,6 @@ namespace _09_Strings
 
             --------------  iterate string --------------
 
-            */
 
             string message = "Crystal x Blade";
 
@@ -134,6 +133,28 @@ namespace _09_Strings
                 Thread.Sleep(250);
             }
 
+
+            --------------  IsNullOrEmpty --------------
+
+            
+            Console.WriteLine("Enter your name: ");
+            string name = Console.ReadLine();
+
+            Console.WriteLine($"Your name is {name}");
+
+
+            if(!string.IsNullOrEmpty(name))
+            {
+                if(name.Equals("Blade"))
+                {
+                    Console.WriteLine("Correct");
+                }
+                Console.WriteLine("2");
+            }
+
+
+            --------------  IsNullOrEmpty --------------
+            */
             Console.ReadLine();
         }
     }
