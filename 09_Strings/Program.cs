@@ -163,9 +163,8 @@ namespace _09_Strings
             Console.WriteLine(value);
 
 
-
             --------------  ToLower & Upper --------------
-            */
+            
 
             string n1 = "BLADE";
             string n2 = "crystal";
@@ -175,6 +174,34 @@ namespace _09_Strings
 
             Console.WriteLine(n1);
             Console.WriteLine(n2);
+
+            
+
+            Console.Write("Enter name: ");
+            string name = Console.ReadLine();
+
+            name = name.ToLower();
+
+            if(name.Equals("blade"))
+            {
+                Console.WriteLine("Correct");
+            }
+            else
+            {
+                Console.WriteLine("InCorrect");
+            }
+
+
+            --------------  StartsWith & EndsWith --------------
+            */
+
+            string message = "Crystal x Blade!";
+
+            Console.WriteLine(message.StartsWith("C")); // True
+            Console.WriteLine(message.EndsWith("!"));   // True
+            Console.WriteLine(message.StartsWith("a"));  // False
+
+
 
             Console.ReadLine();
         }
