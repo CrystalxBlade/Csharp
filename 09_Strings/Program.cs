@@ -214,7 +214,36 @@ namespace _09_Strings
                 Console.WriteLine("Invalid");
             }
 
+
+            --------------  StartsWith & EndsWith --------------
+
+
+            string message = " Crystal x Blade ";
+
+            
+            Console.WriteLine(message.Trim());
+            Console.WriteLine(message.TrimStart());
+            Console.WriteLine(message.TrimEnd());
+
+
+            string number = " +91 1 2 3 4 5 6 7 8 9 ";
+
+            number = number.Trim().Replace(" ", "");
+
+            Console.WriteLine(number.StartsWith("+91"));
+            Console.WriteLine(number);
+
+
+            --------------  StringBuilder --------------
+
             */
+
+            StringBuilder str = new StringBuilder();
+
+            str.AppendLine("Crsytal");
+            str.Append("x Blade");
+
+            Console.WriteLine(str);
 
             Console.ReadLine();
         }
