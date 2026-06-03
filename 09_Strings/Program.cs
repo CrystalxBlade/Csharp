@@ -193,7 +193,7 @@ namespace _09_Strings
 
 
             --------------  StartsWith & EndsWith --------------
-            */
+            
 
             string message = "Crystal x Blade!";
 
@@ -202,6 +202,19 @@ namespace _09_Strings
             Console.WriteLine(message.StartsWith("a"));  // False
 
 
+
+            string number = "+91 123456789";
+
+            if(number.StartsWith("+91"))
+            {
+                Console.WriteLine("Valid");
+            }
+            else
+            {
+                Console.WriteLine("Invalid");
+            }
+
+            */
 
             Console.ReadLine();
         }
