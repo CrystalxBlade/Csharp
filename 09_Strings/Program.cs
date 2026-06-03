@@ -167,9 +167,14 @@ namespace _09_Strings
             --------------  ToLower & Upper --------------
             */
 
-            string name = "Blade";
-            name = name.ToLower();
-            Console.WriteLine(name);
+            string n1 = "BLADE";
+            string n2 = "crystal";
+
+            n1 = n1.ToLower();
+            n2 = n2.ToUpper();
+
+            Console.WriteLine(n1);
+            Console.WriteLine(n2);
 
             Console.ReadLine();
         }
