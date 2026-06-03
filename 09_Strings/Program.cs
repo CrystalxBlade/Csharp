@@ -236,7 +236,7 @@ namespace _09_Strings
 
             --------------  StringBuilder --------------
 
-            */
+            
 
             StringBuilder str = new StringBuilder();
 
@@ -244,7 +244,17 @@ namespace _09_Strings
             str.Append("x Blade");
 
             Console.WriteLine(str);
+            
 
+            StringBuilder message = new StringBuilder();
+
+            message.Append("Hello");
+            message.Insert(2, " x ", 5);      //  He x  x  x  x  x llo
+
+            Console.Write(message);
+
+
+            */
             Console.ReadLine();
         }
     }
