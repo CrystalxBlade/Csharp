@@ -153,8 +153,24 @@ namespace _09_Strings
             }
 
 
-            --------------  IsNullOrEmpty --------------
+            --------------  ToString --------------
+            
+
+            int num = 4;
+
+            string value = num.ToString();
+
+            Console.WriteLine(value);
+
+
+
+            --------------  ToLower & Upper --------------
             */
+
+            string name = "Blade";
+            name = name.ToLower();
+            Console.WriteLine(name);
+
             Console.ReadLine();
         }
     }
