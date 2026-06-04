@@ -254,7 +254,80 @@ namespace _09_Strings
             Console.Write(message);
 
 
+            ------------------ Reverse 
+
+
+            string message = "Blade";
+
+            for(int i = message.Length - 1; i >=0; i--)
+            {
+                Console.Write(message[i]);
+            }
+
+
+            ------------------ Palindrome 
+            
+
+            string message = "Madam", reverse = "";
+            int length = 0, mismatch = 0;
+
+            message = message.ToLower();
+
+            while(length < message.Length)
+            {
+                length++;
+            }
+
+            int i = length - 1;
+            while(i >= 0)
+            {
+                reverse = reverse + message[i];
+                i--;
+            }
+
+            int j = 0;
+            while(j < length)
+            {
+                if (message[j] != reverse[j])
+                {
+                    mismatch++;
+                    break;
+                }
+                j++;
+            }
+
+            if(mismatch == 0)
+            {
+                Console.WriteLine($"{message} is Palindrome");
+            }
+            else
+            {
+                Console.WriteLine($"{message} is not a Palindrome");
+            }
+
+
+            ------------------ Palindrome 
+            
+
+            Console.Write("Enter the password: ");
+            string pass = Console.ReadLine();
+
+            Console.Write("Again Enter the password: ");
+            string comp = Console.ReadLine();
+
+            while(pass != comp)
+            {
+                Console.WriteLine("Password do not match, try again \n");
+                Console.Write("Confirm the password: ");
+
+                comp = Console.ReadLine();
+            }
+        
+                Console.WriteLine("Password match");
             */
+
+           
+
             Console.ReadLine();
         }
     }
