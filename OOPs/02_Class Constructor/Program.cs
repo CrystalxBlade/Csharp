@@ -20,12 +20,15 @@ namespace _02_Class_Constructor
         {
             this.name = name;
             this.age = age;
-            Console.WriteLine("Default Constructor");
+            Console.WriteLine($"Parameterized Constructor {name} {age}");
         }
-
+        
         static void Main(string[] args)
         {
+            Crystal c = new Crystal();
+            Crystal c1 = new Crystal("Blade", 24);
 
+            Console.ReadLine();
         }
     }
 }
