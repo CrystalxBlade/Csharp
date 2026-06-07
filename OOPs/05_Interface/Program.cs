@@ -10,7 +10,6 @@ namespace _05_Interface
     {
         void Flee();
     }
-
     interface IPredator
     {
         void Hunt();
@@ -22,9 +21,23 @@ namespace _05_Interface
             Console.WriteLine("The Rabbit runs away");
         }
     }
-    class Hawk
+    class Hawk : IPredator
     {
-
+        public void Hunt()
+        {
+            Console.WriteLine("The hawk is searching for food");
+        }
+    }
+    class Fish : IPrey,IPredator
+    {
+        public void Flee()
+        {
+            Console.WriteLine("The fish swims away");
+        }
+        public void Hunt()
+        {
+            Console.WriteLine("The fish is searching for smaller fish");
+        }
     }
 
     class Program
@@ -33,6 +46,13 @@ namespace _05_Interface
         {
             Rabbit r = new Rabbit();
             r.Flee();
+
+            Hawk h = new Hawk();
+            h.Hunt();
+
+            Fish f = new Fish();
+            f.Flee();
+            f.Hunt();
 
             Console.ReadLine();
         }
