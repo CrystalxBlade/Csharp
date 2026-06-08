@@ -41,8 +41,37 @@ namespace _06_Polymorphism
 
     */
 
-    class Crystal
+    class Animal
     {
-
+        public virtual void MakeSound()
+        {
+            Console.WriteLine("Animal makes a sound");
+        }
     }
+    class Dog : Animal
+    {
+        public override void MakeSound()
+        {
+            Console.WriteLine("Dog barks");
+        }
+    }
+    class Cat : Animal
+    {
+        public override void MakeSound()
+        {
+            Console.WriteLine("Cat Meow's");
+        }
+
+        static void Main(string[] args)
+        {
+            Cat c = new Cat();
+            c.MakeSound();
+
+            Dog d = new Dog();
+            d.MakeSound();
+
+            Console.ReadLine();
+        }
+    }
+
 }
