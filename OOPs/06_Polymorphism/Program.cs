@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace _06_Polymorphism
 {
+    /*
+     
     class Program
     {
         void Add(int a, int b)
@@ -35,5 +37,12 @@ namespace _06_Polymorphism
 
             Console.ReadLine();
         }
+    }
+
+    */
+
+    class Crystal
+    {
+
     }
 }
