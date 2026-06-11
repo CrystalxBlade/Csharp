@@ -9,6 +9,7 @@ namespace Array
     class Program
     {
         /*
+         * 
         static void Main(string[] args)
         {
             string[] cars = { "BMW", "Mustang", "Corvette" };
@@ -20,7 +21,7 @@ namespace Array
             Console.ReadLine();
         }
 
-        */
+        
 
         static void Main(string[] args)
         {
@@ -31,6 +32,33 @@ namespace Array
                 Console.WriteLine(car[i]);
             }
             Console.ReadLine();
+        }
+
+        */
+
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the size: ");
+            int size;
+
+            while(!int.TryParse(Console.ReadLine(), out size) || size <= 0)
+            {
+                Console.Write("Input Invalid try again: ");
+            }
+
+            string[] cars = new string[size];
+
+            for(int i = 0; i < size; i++)
+            {
+                Console.Write($"Enter { i + 1} car : ");
+                cars[i] = Console.ReadLine();
+            }
+
+            Console.WriteLine("-------- Cars List --------");
+            foreach(string s in cars)
+            {
+                Console.WriteLine(s);
+            }
         }
     }
 }
