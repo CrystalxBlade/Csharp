@@ -11,7 +11,9 @@ namespace _1D_Array
         static void Main(string[] args)
         {
             /*
-             
+            
+            ----------------- Sum -----------------
+
             int[] arr = {2, 4, 6, 8};
             int sum = 0;
 
@@ -24,11 +26,12 @@ namespace _1D_Array
 
             Console.Write($"Sum of arr is: {sum}");
 
-            */
+            ----------------- Max -----------------
 
-            int[] arr = { 2, 4, 6, 8, 10, 5, 1};
+            int[] arr = { 7, 4, 6, 2, 8, 10, 5};
 
             int max = arr[0];
+            int min = arr[0];
 
             for(int i = 0; i < arr.Length; i++)
             {
@@ -36,10 +39,17 @@ namespace _1D_Array
                 {
                     max = arr[i];
                 }
+
+                if (arr[i] < min)
+                {
+                    min = arr[i];
+                }
             }
 
-            Console.Write($"Maximum value is : {max}");
+            Console.WriteLine($"Maximum value is : {max}");
+            Console.Write($"Minimum value is : {min}");
 
+            */
             Console.ReadLine();
         }
     }
