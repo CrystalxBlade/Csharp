@@ -34,8 +34,8 @@ namespace Array
             Console.ReadLine();
         }
 
-        */
-
+        
+        
         static void Main(string[] args)
         {
             Console.Write("Enter the size: ");
@@ -60,5 +60,15 @@ namespace Array
                 Console.WriteLine(s);
             }
         }
+
+        */
+
+
+        static void Main(string[] args)
+        {
+            
+        }
+        
+
     }
 }
