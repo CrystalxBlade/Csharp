@@ -50,6 +50,30 @@ namespace _1D_Array
             Console.Write($"Minimum value is : {min}");
 
             */
+
+            int[] arr = { 7, 4, 6, 2, 8, 10, 5 };
+            int length = arr.Length;
+
+            Console.Write("\n Original Array: ");
+
+            for(int i = 0; i < length; i++)
+            {
+                Console.Write($"{arr[i]} ");
+            }
+
+            for(int i = 0; i < length / 2; i++)
+            {
+                int temp = arr[i];
+                arr[i] = arr[length - i - 1];
+                arr[length - i - 1] = temp;
+            }
+
+            Console.Write("\n Reversed Array: ");
+
+            for(int i = 0; i < length; i++)
+            {
+                Console.Write($"{arr[i]} ");
+            }
             Console.ReadLine();
         }
     }
