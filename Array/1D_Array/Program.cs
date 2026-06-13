@@ -117,9 +117,84 @@ namespace _1D_Array
                 arr[length - i - 1] = temp;
             }
         }
-
     
     }
 
     */
+
+
+    class Program
+    {
+        /*
+            ----------------- Find x at n index -----------------
+
+        static void Main(string[] args)
+        {
+            int[] arr = { 4, 6, 9, 1, 7 };
+
+            int i = 0;
+            int x = 1;
+            bool find = false;
+            int foundIndex = -1;
+            
+            while(i < arr.Length)
+            {
+                if (arr[i] == x)
+                {
+                    find = true;
+                    foundIndex = i;
+                    break;
+                }
+                i++;
+            }
+
+            if(find)
+            {
+                Console.Write($"Found value {x} at : {foundIndex}");
+            }
+            else
+            {
+                Console.Write("Not found");
+            }
+
+            Console.ReadLine();
+        }
+        
+            ----------------- Bubble Sort -----------------
+
+        static void Main(string[] args)
+        {
+            int[] arr = { 8, 4, 10, 9, 7, 2, 6 };
+            int n = arr.Length;
+
+
+            for(int i = 0; i < n-1; i++)
+            {
+                for(int j = 0; j < n-i-1; j++)
+                {
+                    if (arr[j] > arr[j + 1])
+                    {
+                        int temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+
+            Console.Write("\n Sorted Array: ");
+            foreach(int list in arr)
+            {
+                Console.Write($"{list} ");
+            }
+        }
+
+         */
+
+        Console.ReadLine();
+    }
+
+
+
+
+
 }
