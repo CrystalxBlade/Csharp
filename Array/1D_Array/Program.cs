@@ -188,13 +188,43 @@ namespace _1D_Array
             }
         }
 
-         */
+
+              ----------------- Selection Sort -----------------
+
+
+        static void Main(string[] args)
+        {
+            int[] arr = { 8, 4, 10, 9, 7, 2, 6 };
+            int n = arr.Length;
+
+            for(int i = 0; i < n - 1; i++)
+            {
+                int si = i;
+                for(int j = i+1; j < n; j++)
+                {
+                    if (arr[j] < arr[si])
+                    {
+                        si = j;
+                    }
+                }
+
+                int temp = arr[i];
+                arr[i] = arr[si];
+                arr[si] = temp;
+            }
+
+            foreach(int num in arr)
+            {
+                Console.Write($"{num} ");
+            }
+
+             ----------------- Insertion Sort -----------------
+        */
+
 
         Console.ReadLine();
+        }
+        
     }
-
-
-
-
 
 }
