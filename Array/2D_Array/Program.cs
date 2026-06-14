@@ -10,7 +10,14 @@ namespace _2D_Array
     {
         static void Main(string[] args)
         {
+            int[,] matrix = new int[3, 2];
 
+            matrix[0, 0] = 1;
+            matrix[0, 1] = 2;
+            matrix[1, 0] = 3;
+            matrix[1, 1] = 4;
+            matrix[2, 0] = 5;
+            matrix[2, 1] = 6;
         }
     }
 }
