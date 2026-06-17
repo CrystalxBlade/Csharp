@@ -8,10 +8,9 @@ namespace _2D_Array
 {
     class Program
     {
+        /*
         static void Main(string[] args)
-        {
-            /*
-              
+        {     
             int[,] matrix = new int[3, 2];
 
             matrix[0, 0] = 1;
@@ -69,9 +68,71 @@ namespace _2D_Array
                 Console.WriteLine();
             }
             
-            */
+
+            -------------------- Input 2D Matrix ---------------------
+
+           
+            Console.Write("Enter the row: ");
+            int r = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter the column: ");
+            int c = Convert.ToInt32(Console.ReadLine());
+
+            int[,] arr = new int[r , c];
+
+            for(int i = 0; i < arr.GetLength(0); i++)
+            {
+                for(int j = 0; j < arr.GetLength(1); j++)
+                {
+                    Console.Write($"Enter arr[{i} , {j}]: ");
+                    arr[i , j] = Convert.ToInt32(Console.ReadLine());
+                }
+                Console.WriteLine();
+            }
+
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    Console.Write($"{arr[i , j]} ");
+                }
+                Console.WriteLine();
+            }
 
             Console.ReadLine();
         }
+
+
+        -------------------- Find key ---------------------
+
+
+        static void Main(string[] args)
+        {
+            int[,] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }, { 10, 11, 12 } };
+            int row = 4;
+            int col = 3;
+
+            Console.WriteLine(linearSearch(matrix, row, col, 8));
+
+            Console.ReadLine();
+        }
+
+        static bool linearSearch(int[,] mat, int row, int col, int key)
+        {
+            for(int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    if (mat[i, j] == key)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        */
     }
 }
