@@ -180,14 +180,11 @@ namespace _2D_Array
 
 
         -------------------- Maximum Row ---------------------
-        */
+        
 
         static void Main(string[] args)
         {
             int[,] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
-            int row = 3;
-            int col = 3;
-
 
             MaxRowSum(matrix);
             Console.ReadLine();
@@ -217,5 +214,45 @@ namespace _2D_Array
             }
             Console.WriteLine($"\n Max row sum is : {maxSum} at row {maxRow}");
         }
+
+
+
+        -------------------- Maximum Column ---------------------
+
+
+
+        static void Main(string[] args)
+        {
+            int[,] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }, };
+
+            MaxCol(matrix);
+
+            Console.ReadLine();
+        }
+
+        static void MaxCol(int[,] matrix)
+        {
+            int maxSum = 0;
+            int maxCol = 0;
+
+            for(int j = 0; j < matrix.GetLength(1); j++)
+            {
+                int colSum = 0;
+
+                for(int i = 0; i < matrix.GetLength(0); i++)
+                {
+                    colSum += matrix[i, j];
+                }
+
+                if(colSum > maxSum)
+                {
+                    maxSum = colSum;
+                    maxCol = j;
+                }
+            }
+            Console.WriteLine($"Max sum is {maxSum} of {maxCol} column");
+        }
+
+        */
     }
 }
