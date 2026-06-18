@@ -315,5 +315,51 @@ namespace _2D_Array
         }
 
         */
+
+        static void Main(string[] args)
+        {
+            int[,] matrix =
+            {
+                 {1, 2, 3},
+                 {4, 5, 6}
+            };
+
+            int rows = matrix.GetLength(0);
+            int cols = matrix.GetLength(1);
+
+            int[,] transpose = new int[cols, rows];
+
+            // Transpose the matrix
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    transpose[j, i] = matrix[i, j];
+                }
+            }
+        
+            Console.WriteLine("Original Matrix:");
+            PrintMatrix(matrix);
+
+            Console.WriteLine("\nTranspose Matrix:");
+            PrintMatrix(transpose);
+
+            Console.ReadLine();
+        }
+
+        static void PrintMatrix(int[,] matrix)
+        {
+            int rows = matrix.GetLength(0);
+            int cols = matrix.GetLength(1);
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    Console.Write(matrix[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
