@@ -223,7 +223,7 @@ namespace _2D_Array
 
         static void Main(string[] args)
         {
-            int[,] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }, };
+            int[,] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
             MaxCol(matrix);
 
@@ -251,6 +251,32 @@ namespace _2D_Array
                 }
             }
             Console.WriteLine($"Max sum is {maxSum} of {maxCol} column");
+        }
+
+
+        -------------------- Primary Diagonal ---------------------
+        
+
+        static void Main(string[] args)
+        {
+            int[,] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+
+            Diagonal(matrix);
+            Console.ReadLine();
+        }
+
+        static void Diagonal(int[,] matrix)
+        {
+            for(int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for(int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    if(i == j)
+                    {
+                        Console.Write($"{matrix[i,j]} ");
+                    }
+                }
+            }
         }
 
         */
