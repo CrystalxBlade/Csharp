@@ -26,16 +26,27 @@ namespace List
 
             food.Remove("Fries");
 
-            ----------------- Insert -----------------
-            */
+            ----------------- Insert / Count -----------------
+
+            
 
             List<String> food = new List<String>();
 
+            food.Add("Pizza");
+            food.Add("Hamburger");
+            food.Add("Hotdog");
+            food.Add("Fries");
+
+            food.Insert(2, "Sushi");
+            
             foreach (string item in food)
             {
                 Console.WriteLine(item);
             }
 
+            Console.WriteLine(food.Count);
+
+            */
             Console.ReadLine();
         }
     }
