@@ -59,7 +59,26 @@ namespace List
 
             Console.WriteLine(food.Contains("Fries"));
 
+
+            ----------------- Sort / Reverse -----------------
+
             */
+
+            List<String> food = new List<String>();
+
+            food.Add("Pizza");
+            food.Add("Hamburger");
+            food.Add("Hotdog");
+            food.Add("Fries");
+
+            // food.Sort();
+            // food.Reverse();
+
+            foreach(string item in food)
+            {
+                Console.WriteLine(item);
+            }
+            
             Console.ReadLine();
         }
     }
