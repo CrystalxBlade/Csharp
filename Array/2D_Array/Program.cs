@@ -314,8 +314,9 @@ namespace _2D_Array
             }
         }
 
+
         -------------------- Transpose Matrix ---------------------
-        */
+        
 
         static void Main(string[] args)
         {
@@ -358,6 +359,49 @@ namespace _2D_Array
                 for (int j = 0; j < cols; j++)
                 {
                     Console.Write(matrix[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+        }
+
+         -------------------- Add Matrix ---------------------
+        */
+
+        static void Main(string[] args)
+        {
+            int[,] matrix1 = { { 1, 2, 3 }, { 4, 5, 6 } };
+            int[,] matrix2 = { { 6, 5, 4 }, { 3, 2, 1 } };
+
+            int[,] result = AddMatrix(matrix1, matrix2);
+
+            PrintMatrix(result);
+
+            Console.ReadLine();
+        }
+        
+        static int[,] AddMatrix(int[,] m1, int[,] m2)
+        {
+            int row = m1.GetLength(0);
+            int col = m1.GetLength(1);
+            int[,] result = new int[row, col];
+
+            for(int i = 0; i < row; i++)
+            {
+                for(int j = 0; j < col; j++)
+                {
+                    result[i, j] = m1[i, j] + m2[i, j];
+                }
+            }
+            return result;
+        }
+
+        static void PrintMatrix(int[,] matrix)
+        {
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    Console.Write($"{matrix[i, j]} ");
                 }
                 Console.WriteLine();
             }
