@@ -28,8 +28,6 @@ namespace List
 
             ----------------- Insert / Count -----------------
 
-            
-
             List<String> food = new List<String>();
 
             food.Add("Pizza");
@@ -45,6 +43,21 @@ namespace List
             }
 
             Console.WriteLine(food.Count);
+
+
+            ----------------- Index Of / Contains -----------------
+            
+
+            List<String> food = new List<String>();
+
+            food.Add("Pizza");
+            food.Add("Hamburger");
+            food.Add("Hotdog");
+            food.Add("Fries");
+
+            Console.WriteLine(food.IndexOf("Hotdog"));
+
+            Console.WriteLine(food.Contains("Fries"));
 
             */
             Console.ReadLine();
