@@ -1,0 +1,41 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace List_Objects
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Player> players = new List<Player>();
+
+            Player player1 = new Player("Crystal");
+            Player player2 = new Player("Blade");
+            Player player3 = new Player("Skull");
+
+            players.Add(player1);   
+            players.Add(player2);
+            players.Add(player3);
+
+            foreach(Player player in players)
+            {
+                Console.WriteLine(player.username);
+            }
+
+            Console.ReadLine();
+        }
+    }
+
+    class Player
+    {
+        public String username;
+
+        public Player(String username)
+        {
+            this.username = username;
+        }
+    }
+}
