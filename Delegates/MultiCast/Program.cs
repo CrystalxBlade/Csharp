@@ -6,29 +6,33 @@ using System.Threading.Tasks;
 
 namespace MultiCast
 {
-    public delegate void AddDelegate(int x, int y);
-    public delegate string SayDelegate(string str);
+    public delegate void GetDelegate(double x, double y);
+
     class Program
     {
-        public void AddNums(int a, int b)
+        public void GetArea(double Width, double Height)
         {
-            Console.WriteLine(a + b);
+            Console.WriteLine($" Area: {Width * Height}");
         }
-        public static string SayHello(string name)
+
+        public void GetPerimeter(double Width, double Height)
         {
-            return $"Hello {name}";
+            Console.WriteLine($" Perimeter: { 2 * (Width + Height)}");
         }
 
         static void Main(string[] args)
         {
             Program p = new Program();
 
-            AddDelegate ad = new AddDelegate(p.AddNums);
-            ad.Invoke(2, 4);
+            GetDelegate obj = p.GetArea;
 
-            SayDelegate sd = new SayDelegate(Program.SayHello);
-            string str = sd.Invoke("Blade");
-            Console.WriteLine(str);
+            obj += p.GetPerimeter;
+
+            obj.Invoke(24.56, 49.12);
+
+            Console.WriteLine();
+
+            obj.Invoke(48.12, 64.81);
 
             Console.ReadLine();
         }
