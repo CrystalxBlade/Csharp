@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F1D0284B-E6F4-405B-AC57-38ED38F2B1C8}</ProjectGuid>
+    <ProjectGuid>{BCDEE1B7-AECB-4A88-A6ED-689F28E379D1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Func</RootNamespace>
-    <AssemblyName>Func</AssemblyName>
+    <RootNamespace>Generic_Delegates</RootNamespace>
+    <AssemblyName>Generic Delegates</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

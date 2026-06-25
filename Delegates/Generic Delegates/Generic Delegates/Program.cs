@@ -4,11 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Func
+namespace Generic_Delegates
 {
-    public delegate double Delegate1(int x, float y, double z);
-    public delegate void Delegate2(int x, float y, double z);
-    public delegate bool Delegate3(string str);
     class Program
     {
         public static double AddNums1(int x, float y, double z)
@@ -18,27 +15,27 @@ namespace Func
 
         public static void AddNums2(int x, float y, double z)
         {
-            Console.WriteLine( x + y + z);
+            Console.WriteLine(x + y + z);
         }
 
         public static bool CheckLength(string str)
         {
-            if(str.Length > 5)
+            if (str.Length > 5)
                 return true;
             return false;
 
         }
         static void Main(string[] args)
         {
-            Delegate1 obj1 = AddNums1;
+            Func<int, float, double, double> obj1 = AddNums1;
             double result = obj1.Invoke(100, 34.5f, 193.465);
             Console.WriteLine(result);
 
-            Delegate2 obj2 = AddNums2;
+            Action<int, float, double> obj2 = AddNums2;
             obj2.Invoke(100, 34.5f, 193.465);
 
-            Delegate3 obj3 = CheckLength;
-            bool status = obj3.Invoke("Hello");
+            Predicate<string> obj3 = CheckLength;
+            bool status = obj3.Invoke("Hello Blade");
             Console.WriteLine(status);
 
             Console.ReadLine();
