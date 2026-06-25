@@ -35,7 +35,7 @@ namespace Generic_Delegates
             obj2.Invoke(100, 34.5f, 193.465);
 
             Predicate<string> obj3 = CheckLength;
-            bool status = obj3.Invoke("Hello Blade");
+            bool status = obj3.Invoke("Crystal Blade");
             Console.WriteLine(status);
 
             Console.ReadLine();
