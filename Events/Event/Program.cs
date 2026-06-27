@@ -10,6 +10,8 @@ namespace Event
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Events");
+            Console.ReadLine();
         }
     }
 }
