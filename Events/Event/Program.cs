@@ -6,12 +6,40 @@ using System.Threading.Tasks;
 
 namespace Event
 {
+    class Door
+    {
+        public event Action OnDoorOpened;
+
+        public void OpenDoor()
+        {
+            Console.WriteLine("Door is opened");
+
+            OnDoorOpened?.Invoke() ;
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Events");
+            Door door = new Door();
+
+            door.OnDoorOpened += LightOn;
+            door.OnDoorOpened += PlayWelcomeSound;
+
+            door.OpenDoor();
+
             Console.ReadLine();
+        }
+
+        static void LightOn()
+        {
+            Console.WriteLine("Light turned on. ");
+        }
+
+        static void PlayWelcomeSound()
+        {
+            Console.WriteLine("Welcome sound played. ");
         }
     }
 }
