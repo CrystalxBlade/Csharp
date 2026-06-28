@@ -8,13 +8,13 @@ namespace Event
 {    
     class Door
     {
-        public event Action OnDoorOpened;
+        public event Action OnDoorOpened;         // Creating an event
 
         public void OpenDoor()
         {
             Console.WriteLine("Door is opened");
 
-            OnDoorOpened?.Invoke() ;
+            OnDoorOpened?.Invoke() ;             // Invoking the event
         }
     }
 
@@ -24,13 +24,13 @@ namespace Event
         {
             Door door = new Door();
 
-            door.OnDoorOpened += LightOn;
-            door.OnDoorOpened += PlayWelcomeSound;
+            door.OnDoorOpened += LightOn;           // Subscribing
+            door.OnDoorOpened += PlayWelcomeSound;  // Multiple subscribers
 
             Console.WriteLine("\n First Open: ");
             door.OpenDoor();
 
-            door.OnDoorOpened -= PlayWelcomeSound;
+            door.OnDoorOpened -= PlayWelcomeSound;  // UnSubscribing
             Console.WriteLine("\n Second Open: ");
             door.OpenDoor();
 
