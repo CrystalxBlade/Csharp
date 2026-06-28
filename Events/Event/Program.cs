@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Event
-{
+{    
     class Door
     {
         public event Action OnDoorOpened;
@@ -27,6 +27,11 @@ namespace Event
             door.OnDoorOpened += LightOn;
             door.OnDoorOpened += PlayWelcomeSound;
 
+            Console.WriteLine("\n First Open: ");
+            door.OpenDoor();
+
+            door.OnDoorOpened -= PlayWelcomeSound;
+            Console.WriteLine("\n Second Open: ");
             door.OpenDoor();
 
             Console.ReadLine();
