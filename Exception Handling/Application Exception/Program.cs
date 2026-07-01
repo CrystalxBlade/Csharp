@@ -10,11 +10,20 @@ namespace Application_Exception
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter the num: ");
-            int num = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the char: ");
+            char ch = Convert.ToChar(Console.ReadLine());
 
-            string val = (num > 10) ? "Greater" : "Smaller";
-            Console.WriteLine(val);
+            if(ch >= 'A' && ch <= 'Z')
+            {
+                ch = (char)(ch + 32);
+                Console.WriteLine("Vowel");
+            }
+            else
+            {
+                Console.WriteLine("Not a letter");
+            }
+
+            Console.WriteLine(ch);
 
             Console.ReadLine();
         }
