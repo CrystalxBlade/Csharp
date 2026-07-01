@@ -7,7 +7,7 @@
     <ProjectGuid>{51424BA6-B590-46AC-B4FE-14CC108E9ED3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Application_Exception</RootNamespace>
-    <AssemblyName>Application_Exception</AssemblyName>
+    <AssemblyName>Application Exception</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

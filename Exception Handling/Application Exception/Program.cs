@@ -10,6 +10,13 @@ namespace Application_Exception
     {
         static void Main(string[] args)
         {
+            Console.Write("Enter the num: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            string val = (num > 10) ? "Greater" : "Smaller";
+            Console.WriteLine(val);
+
+            Console.ReadLine();
         }
     }
 }
