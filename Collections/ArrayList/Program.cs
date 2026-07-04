@@ -21,7 +21,16 @@ namespace List
 
             foreach(object obj in al)
             {
-                Console.Write($"{obj}, ");
+                Console.Write($"- {obj} ");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            al.Insert(3, 150);
+            foreach(object obj in al)
+            {
+                Console.Write($"- {obj} ");
             }
 
             Console.ReadLine();
