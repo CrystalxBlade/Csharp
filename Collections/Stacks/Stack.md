@@ -16,3 +16,27 @@ Top
 ```
 
 ### You can only take the top plate.
+
+
+## Why not use List<T>?
+
+### You could.
+
+```
+List<int> numbers = new List<int>();
+
+```
+
+### But imagine you want to make sure people only add and remove from the end.
+
+### A Stack<T> enforces that rule.
+
+### It only allows:
+
+```
+Push() → Add to the top
+Pop() → Remove from the top
+Peek() → Look at the top
+
+```
+### This makes your code express your intent more clearly.
