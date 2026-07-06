@@ -40,3 +40,76 @@ Peek() → Look at the top
 
 ```
 ### This makes your code express your intent more clearly.
+
+
+
+## Real-world uses of Stack
+### 1. Undo Feature ⭐⭐⭐⭐⭐
+
+### This is the most common example.
+
+### Imagine Microsoft Word.
+
+```
+Type A
+Type B
+Type C
+
+```
+### Stack:
+
+```
+Top
+C
+B
+A
+
+```
+### Press Undo:
+
+```
+Pop()
+
+```
+### "C" disappears.
+
+### Press Undo again:
+
+```
+Pop()
+
+```
+
+### "B" disappears.
+
+## 2. Browser Back Button ⭐⭐⭐⭐⭐
+
+### Suppose you visit:
+
+```
+Google
+↓
+YouTube
+↓
+GitHub
+↓
+Stack Overflow
+
+```
+### A stack stores:
+
+```
+Top
+Stack Overflow
+GitHub
+YouTube
+Google
+
+```
+### Press Back:
+
+```
+Pop()
+
+```
+### You return to GitHub
