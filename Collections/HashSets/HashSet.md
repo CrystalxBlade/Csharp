@@ -14,7 +14,7 @@ names.Add("Crystal");
 names.Add("Blade");
 
 ```
-### OutPut
+### Output
 
 ```
 Blade
