@@ -7,7 +7,7 @@
     <ProjectGuid>{FE0A3E2F-D4BE-4F4A-9EC7-119A844A6008}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Generic_Class</RootNamespace>
-    <AssemblyName>Generic_Class</AssemblyName>
+    <AssemblyName>Generic Class</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
