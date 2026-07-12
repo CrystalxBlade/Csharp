@@ -6,5 +6,7 @@ relational database SQL Server.
  
 
 linq to Objects: Arrays, Collections, etc.
+
 linq to databases: DataTables, Relational Database tables.
+
 linq to XML: XML Files
