@@ -27,7 +27,7 @@ namespace Linq
 
             // WHERE
 
-            Console.WriteLine("WHERE");
+            Console.WriteLine("WHERE \n");
             var whenResult = students.Where(s => s.Marks >= 80);
 
             foreach(var student in whenResult)
@@ -39,7 +39,7 @@ namespace Linq
 
             // SELECT
 
-            Console.WriteLine("SELECT");
+            Console.WriteLine("SELECT \n");
             var selectResult = students.Select(s => s.Name);
 
             foreach(var name in selectResult)
@@ -51,13 +51,32 @@ namespace Linq
 
             // ORDER
 
-            Console.WriteLine("ORDERBY");
+            Console.WriteLine("ORDERBY \n");
             var orderResult = students.OrderBy(s => s.Name);
 
             foreach(var student in orderResult)
             {
                 Console.WriteLine(student.Name);
             }
+
+            Console.WriteLine();
+
+            // OrderByDescending
+
+            Console.WriteLine("OrderByDescending \n");
+            var descResult = students.OrderByDescending(s => s.Name);
+
+            foreach(var desc in descResult)
+            {
+                Console.WriteLine(desc.Name);
+            }
+
+            Console.WriteLine();
+
+            // COUNT
+
+            Console.WriteLine("COUNT");
+            Console.WriteLine(students.Count());
 
             Console.ReadLine();
         }
