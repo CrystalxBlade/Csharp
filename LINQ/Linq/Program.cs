@@ -25,13 +25,38 @@ namespace Linq
                 new Student{ID = 4, Name = "Crystal", Age = 21, Marks = 85}
             };
 
-            // Where
+            // WHERE
+
             Console.WriteLine("WHERE");
             var whenResult = students.Where(s => s.Marks >= 80);
 
             foreach(var student in whenResult)
             {
                 Console.WriteLine($"{student.Name} - {student.Marks}");
+            }
+
+            Console.WriteLine();
+
+            // SELECT
+
+            Console.WriteLine("SELECT");
+            var selectResult = students.Select(s => s.Name);
+
+            foreach(var name in selectResult)
+            {
+                Console.WriteLine(name);
+            }
+
+            Console.WriteLine();
+
+            // ORDER
+
+            Console.WriteLine("ORDERBY");
+            var orderResult = students.OrderBy(s => s.Name);
+
+            foreach(var student in orderResult)
+            {
+                Console.WriteLine(student.Name);
             }
 
             Console.ReadLine();
