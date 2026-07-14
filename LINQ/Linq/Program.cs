@@ -115,6 +115,50 @@ namespace Linq
 
             Console.WriteLine();
 
+            // SUM 
+
+            Console.WriteLine("===== SUM =====");
+            Console.WriteLine($"Total Marks : {students.Sum(s => s.Marks)}");
+
+            Console.WriteLine();
+
+            // AVERAGE
+            
+            Console.WriteLine("===== AVERAGE =====");
+            Console.WriteLine($"Average Marks : {students.Average(s => s.Marks)}");
+
+            Console.WriteLine();
+
+            // MAX 
+
+            Console.WriteLine("===== MAX =====");
+            Console.WriteLine($"Highest Marks : {students.Max(s => s.Marks)}");
+
+            Console.WriteLine();
+
+            // MIN 
+
+            Console.WriteLine("===== MIN =====");
+            Console.WriteLine($"Lowest Marks : {students.Min(s => s.Marks)}");
+
+            Console.WriteLine();
+
+            // GROUPBY
+
+            Console.WriteLine("=== GROUPBY ===");
+
+            var groups = students.GroupBy(s => s.Marks >= 80);
+
+            foreach(var grp in groups)
+            {
+                Console.WriteLine(grp.Key ? "Passed" : "Failed");
+
+                foreach(var student in grp)
+                {
+                    Console.WriteLine($"{student.Name} - {student.Marks}");
+                }
+                Console.WriteLine();
+            }
 
             Console.ReadLine();
         }
