@@ -27,7 +27,7 @@ namespace Linq
 
             // WHERE
 
-            Console.WriteLine("WHERE \n");
+            Console.WriteLine("=== WHERE === \n");
             var whenResult = students.Where(s => s.Marks >= 80);
 
             foreach(var student in whenResult)
@@ -39,7 +39,7 @@ namespace Linq
 
             // SELECT
 
-            Console.WriteLine("SELECT \n");
+            Console.WriteLine("=== SELECT === \n");
             var selectResult = students.Select(s => s.Name);
 
             foreach(var name in selectResult)
@@ -51,7 +51,7 @@ namespace Linq
 
             // ORDER
 
-            Console.WriteLine("ORDERBY \n");
+            Console.WriteLine("=== ORDERBY === \n");
             var orderResult = students.OrderBy(s => s.Name);
 
             foreach(var student in orderResult)
@@ -63,7 +63,7 @@ namespace Linq
 
             // OrderByDescending
 
-            Console.WriteLine("OrderByDescending \n");
+            Console.WriteLine("=== OrderByDescending === \n");
             var descResult = students.OrderByDescending(s => s.Name);
 
             foreach(var desc in descResult)
@@ -73,10 +73,48 @@ namespace Linq
 
             Console.WriteLine();
 
+            // FIRST
+
+            Console.WriteLine("=== FIRST ===");
+            var first = students.First(s => s.Marks >= 80);
+
+            Console.WriteLine($"{first.Name} - {first.Marks}");
+
+            Console.WriteLine();
+
+            // FIRSTORDEFAULT
+
+            Console.WriteLine("=== FIRSTDEFAULT === \n");
+            var firstDefault = students.FirstOrDefault(s => s.Name == "Nikko");
+
+            if (firstDefault != null)
+                Console.WriteLine(firstDefault.Name);
+            else
+                Console.WriteLine("Student Not Found");
+
+            Console.WriteLine();
+
             // COUNT
 
-            Console.WriteLine("COUNT");
+            Console.WriteLine("=== COUNT=== ");
             Console.WriteLine(students.Count());
+
+            Console.WriteLine();
+
+            // ANY
+
+            Console.WriteLine("===== ANY =====");
+            Console.WriteLine(students.Any(s => s.Marks > 90));
+
+            Console.WriteLine();
+
+            // ALL
+
+            Console.WriteLine("===== ALL =====");
+            Console.WriteLine(students.All(s => s.Marks >= 60));
+
+            Console.WriteLine();
+
 
             Console.ReadLine();
         }
