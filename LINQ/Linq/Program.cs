@@ -160,6 +160,19 @@ namespace Linq
                 Console.WriteLine();
             }
 
+            // SKIP
+
+            Console.WriteLine("=== SKIP === \n");
+
+            var skip = students.Skip(2);
+
+            foreach(var student in skip)
+            {
+                Console.WriteLine(student.Name);
+            }
+
+            Console.WriteLine();
+
             Console.ReadLine();
         }
     }
