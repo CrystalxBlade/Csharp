@@ -173,6 +173,17 @@ namespace Linq
 
             Console.WriteLine();
 
+            // TAKE
+
+            Console.WriteLine("=== TAKE === \n");
+
+            var take = students.Take(2);
+
+            foreach(var student in take)
+            {
+                Console.WriteLine(student.Name);
+            }
+
             Console.ReadLine();
         }
     }
