@@ -201,6 +201,18 @@ namespace Linq
 
             Console.WriteLine();
 
+            // TOARRAy
+
+            Console.WriteLine("=== TOARRAY === \n");
+
+            Student[] array = students.ToArray();
+
+            foreach(var stud in array)
+            {
+                Console.WriteLine(stud.Name);
+            }
+
+            
             Console.ReadLine();
         }
     }
