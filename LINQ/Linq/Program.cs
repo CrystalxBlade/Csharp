@@ -201,7 +201,7 @@ namespace Linq
 
             Console.WriteLine();
 
-            // TOARRAy
+            // TOARRAY
 
             Console.WriteLine("=== TOARRAY === \n");
 
@@ -212,6 +212,17 @@ namespace Linq
                 Console.WriteLine(stud.Name);
             }
 
+            // TODICTIONARY
+
+            Console.WriteLine("=== TODICTIONARY ===\n");
+
+            Dictionary<int, string> dictionary =
+                students.ToDictionary(s => s.ID, s => s.Name);
+
+            foreach(var item in dictionary)
+            {
+                Console.WriteLine($"{item.Key} : {item.Value}");
+            }
             
             Console.ReadLine();
         }
