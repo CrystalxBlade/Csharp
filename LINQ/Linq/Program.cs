@@ -184,6 +184,23 @@ namespace Linq
                 Console.WriteLine(student.Name);
             }
 
+            Console.WriteLine();
+
+            // TOLIST
+
+            Console.WriteLine("=== TOLIST === \n");
+
+            List<Student> list = students
+                .Where(s => s.Marks >= 80)
+                .ToList();
+
+            foreach(var student in list)
+      
+                Console.WriteLine(student.Name);
+               
+
+            Console.WriteLine();
+
             Console.ReadLine();
         }
     }
