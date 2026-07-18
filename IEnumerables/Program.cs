@@ -24,19 +24,27 @@ namespace IEnumerables
             };
 
 
-            /*
-             =================================================
-              1. List<T> can be assigned to IEnumerable<T>
-             =================================================
-            */
-
             Console.WriteLine("===== List To IEnumerable =====");
+
             IEnumerable<Student> result = students;
 
             foreach(Student student in result)
             {
                 Console.WriteLine(student.Name);
             }
+
+            Console.WriteLine();
+
+            Console.WriteLine("===== LINQ Returns IEnumerable =====");
+
+            IEnumerable<Student> passedStudents =
+                students.Where(s => s.Marks >= 80);
+
+            foreach(Student stud in passedStudents)
+            {
+                Console.WriteLine(stud.Name);
+            }
+
             Console.ReadLine();
         }
 
