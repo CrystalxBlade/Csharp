@@ -45,6 +45,22 @@ namespace IEnumerables
                 Console.WriteLine(stud.Name);
             }
 
+            Console.WriteLine();
+
+            Console.WriteLine("===== Array =====");
+            Student[] array =
+            {
+                new Student(){ID = 6, Name = "ALice", Marks = 91},
+                new Student(){ID = 7, Name = "David", Marks = 75}
+            };
+
+            IEnumerable<Student> arrayStudents = array;
+
+            foreach(Student stud in arrayStudents)
+            {
+                Console.WriteLine(stud.Name);
+            }
+
             Console.ReadLine();
         }
 
