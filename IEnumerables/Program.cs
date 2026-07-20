@@ -61,6 +61,25 @@ namespace IEnumerables
                 Console.WriteLine(stud.Name);
             }
 
+            Console.WriteLine();
+
+            Console.WriteLine("===== Hashset =====");
+
+            HashSet<Student> hash = new HashSet<Student>() 
+            {
+                new Student(){ID = 8, Name "Knight", Marks = 77},
+                new Student(){ID = 9, Name "Shakra", Marks = 92}
+            };
+
+            foreach(Student stud in hash)
+            {
+                Console.WriteLine(stud.Name);
+            }
+
+            Console.WriteLine();
+
+
+
             Console.ReadLine();
         }
 
