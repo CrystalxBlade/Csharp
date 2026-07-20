@@ -11,7 +11,7 @@ namespace IEnumerables
         public int ID { get; set; }
         public string Name { get; set; }
         public int Marks { get; set; }
-    }
+    }           
 
     class Program
     {
@@ -19,8 +19,11 @@ namespace IEnumerables
         {
             List<Student> students = new List<Student>()
             {
-                new Student{ID = 1, Name = "Blade", Marks = 69},
-                new Student{ID = 2, Name = "Crystal", Marks = 79}
+                new Student{ID = 1, Name = "Blade",   Marks = 69},
+                new Student{ID = 2, Name = "Crystal", Marks = 79},
+                new Student{ID = 3, Name = "Alex",    Marks = 70},
+                new Student{ID = 4, Name = "Steve",   Marks = 85},
+                new Student{ID = 5, Name = "Bob",     Marks = 60}
             };
 
 
@@ -67,8 +70,8 @@ namespace IEnumerables
 
             HashSet<Student> hash = new HashSet<Student>() 
             {
-                new Student(){ID = 8, Name "Knight", Marks = 77},
-                new Student(){ID = 9, Name "Shakra", Marks = 92}
+                new Student(){ID = 8, Name = "Knight", Marks = 77},
+                new Student(){ID = 9, Name = "Shakra", Marks = 92}
             };
 
             foreach(Student stud in hash)
@@ -76,11 +79,21 @@ namespace IEnumerables
                 Console.WriteLine(stud.Name);
             }
 
-            Console.WriteLine();
+            Console.WriteLine("");
 
+            Console.WriteLine("===== Method Parameter =====");
+            DispalyStudents(students);
 
 
             Console.ReadLine();
+        }
+
+        static void DispalyStudents(IEnumerable<Student> students)
+        {
+            foreach(Student stud in students)
+            {
+                Console.WriteLine(stud.Name);
+            }
         }
 
     }
