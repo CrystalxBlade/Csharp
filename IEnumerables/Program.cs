@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,7 +32,7 @@ namespace IEnumerables
 
             IEnumerable<Student> result = students;
 
-            foreach(Student student in result)
+            foreach (Student student in result)
             {
                 Console.WriteLine(student.Name);
             }
@@ -43,7 +44,7 @@ namespace IEnumerables
             IEnumerable<Student> passedStudents =
                 students.Where(s => s.Marks >= 80);
 
-            foreach(Student stud in passedStudents)
+            foreach (Student stud in passedStudents)
             {
                 Console.WriteLine(stud.Name);
             }
@@ -59,7 +60,7 @@ namespace IEnumerables
 
             IEnumerable<Student> arrayStudents = array;
 
-            foreach(Student stud in arrayStudents)
+            foreach (Student stud in arrayStudents)
             {
                 Console.WriteLine(stud.Name);
             }
@@ -68,13 +69,13 @@ namespace IEnumerables
 
             Console.WriteLine("===== Hashset =====");
 
-            HashSet<Student> hash = new HashSet<Student>() 
+            HashSet<Student> hash = new HashSet<Student>()
             {
                 new Student(){ID = 8, Name = "Knight", Marks = 77},
                 new Student(){ID = 9, Name = "Shakra", Marks = 92}
             };
 
-            foreach(Student stud in hash)
+            foreach (Student stud in hash)
             {
                 Console.WriteLine(stud.Name);
             }
@@ -82,8 +83,39 @@ namespace IEnumerables
             Console.WriteLine("");
 
             Console.WriteLine("===== Method Parameter =====");
+
             DispalyStudents(students);
 
+            Console.WriteLine();
+
+            Console.WriteLine("===== Method Return Type =====");
+
+            IEnumerable<Student> topStudents = GetTopStudents(students);
+
+            foreach (Student stud in topStudents)
+            {
+                Console.WriteLine(stud.Name);
+            }
+
+            Console.WriteLine();
+
+            Console.WriteLine("===== Deferred Execution");
+
+            IEnumerable<Student> query =
+                students.Where(s => s.Marks >= 80);
+
+            students.Add(new Student()
+            {
+                ID = 10,
+                Name = "Mike",
+                Marks = 82
+            });
+
+            foreach(Student stud in query)
+            {
+                Console.WriteLine(stud.Name);
+            }
+              
 
             Console.ReadLine();
         }
@@ -94,6 +126,11 @@ namespace IEnumerables
             {
                 Console.WriteLine(stud.Name);
             }
+        }
+
+        static IEnumerable<Student> GetTopStudents(List<Student> students)
+        {
+            return students.Where(s => s.Marks >= 80);
         }
 
     }
