@@ -27,6 +27,10 @@ namespace IEnumerables
                 new Student{ID = 5, Name = "Bob",     Marks = 60}
             };
 
+            //=================================================
+            // 1. List<T> can be assigned to IEnumerable<T>
+            //=================================================
+
 
             Console.WriteLine("===== List To IEnumerable =====");
 
@@ -39,6 +43,10 @@ namespace IEnumerables
 
             Console.WriteLine();
 
+            //=================================================
+            // 2. IEnumerable returned by LINQ
+            //=================================================
+
             Console.WriteLine("===== LINQ Returns IEnumerable =====");
 
             IEnumerable<Student> passedStudents =
@@ -50,6 +58,10 @@ namespace IEnumerables
             }
 
             Console.WriteLine();
+
+            //=================================================
+            // 3. IEnumerable can work with Arrays
+            //=================================================
 
             Console.WriteLine("===== Array =====");
             Student[] array =
@@ -67,6 +79,10 @@ namespace IEnumerables
 
             Console.WriteLine();
 
+            //=================================================
+            // 4. IEnumerable can work with HashSet
+            //=================================================
+
             Console.WriteLine("===== Hashset =====");
 
             HashSet<Student> hash = new HashSet<Student>()
@@ -80,6 +96,10 @@ namespace IEnumerables
                 Console.WriteLine(stud.Name);
             }
 
+            //=================================================
+            // 5. Method Parameter
+            //=================================================
+
             Console.WriteLine("");
 
             Console.WriteLine("===== Method Parameter =====");
@@ -87,6 +107,10 @@ namespace IEnumerables
             DispalyStudents(students);
 
             Console.WriteLine();
+
+            //=================================================
+            // 6. Method Return Type
+            //=================================================
 
             Console.WriteLine("===== Method Return Type =====");
 
@@ -98,6 +122,10 @@ namespace IEnumerables
             }
 
             Console.WriteLine();
+
+            //=================================================
+            // 7. Deferred Execution
+            //=================================================
 
             Console.WriteLine("===== Deferred Execution =====");
 
