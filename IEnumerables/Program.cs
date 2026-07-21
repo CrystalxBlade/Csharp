@@ -99,10 +99,15 @@ namespace IEnumerables
 
             Console.WriteLine();
 
-            Console.WriteLine("===== Deferred Execution");
+            Console.WriteLine("===== Deferred Execution =====");
 
             IEnumerable<Student> query =
                 students.Where(s => s.Marks >= 80);
+
+            foreach (Student stud in query)
+            {
+                Console.WriteLine(stud.Name);
+            }
 
             students.Add(new Student()
             {
@@ -111,11 +116,41 @@ namespace IEnumerables
                 Marks = 82
             });
 
-            foreach(Student stud in query)
+            Console.WriteLine();
+
+            //=================================================
+            // 8. Immediate Execution
+            //=================================================
+
+            Console.WriteLine("===== Immediate Execution =====");
+
+            List<Student> list =
+                students.Where(s => s.Marks >= 80).ToList();
+
+            students.Add(new Student()
+            {
+                ID = 11,
+                Name = "Kevin",
+                Marks = 90
+            });
+
+            foreach(Student stud in list)
             {
                 Console.WriteLine(stud.Name);
             }
-              
+
+            Console.WriteLine();
+
+            //=================================================
+            // 9. IEnumerable is Read Only
+            //=================================================
+
+            Console.WriteLine("===== Read Only =====");
+
+            IEnumerable<Student> readOnly = students;
+
+            Console.WriteLine("IEnumerable does not have ADD(), " +
+                "REMOVE() or INSERT().");
 
             Console.ReadLine();
         }
