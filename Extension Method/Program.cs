@@ -25,11 +25,19 @@ namespace Extension_Method
             return new string(chars);
         }
 
+        // Example 3: Extension Method for int
+
         public static bool IsEven(this int num)
         {
             return num % 2 == 0;
         }
 
+        // Example 4: Extension Method with Parameter
+
+        public static bool IsGreaterThan(this int number, int value)
+        {
+            return number > value;
+        }
     }
 
     class Program
@@ -67,6 +75,17 @@ namespace Extension_Method
             int num = 10;
 
             Console.WriteLine(num.IsEven());
+
+            Console.WriteLine();
+
+            //====================================
+            // Example 4: IsGreaterThan()
+            //====================================
+
+            Console.WriteLine("===== IsGreaterThan =====");
+
+            Console.WriteLine(10.IsGreaterThan(5));
+
 
             Console.ReadLine();
         }
