@@ -1,4 +1,4 @@
-# File Handling in C#
+﻿# File Handling in C#
 
 ## Definition
 
@@ -64,3 +64,21 @@ using System.IO;
 - Export reports
 - Read configuration files
 - Upload and download files
+
+
+- 
+@ (Verbatim String Literal)
+
+Definition:
+The @ symbol tells C# to treat a string exactly as it is written.
+
+Why use it?
+✔ Makes Windows file paths easier to write.
+✔ No need to escape backslashes (\\).
+✔ Supports multi-line strings.
+
+Without @
+"C:\\Users\\Blade\\Notes.txt"
+
+With @
+@"C:\Users\Blade\Notes.txt"
