@@ -32,6 +32,20 @@ namespace File_Handling
 
             Console.WriteLine("File Created");
 
+            //======================================================
+            // 3. Write Text
+            //======================================================
+
+            File.WriteAllText(file, "Hello form C#");
+            Console.WriteLine("Text Written");
+
+            //======================================================
+            // 4. Read Text
+            //======================================================
+
+            string date = File.ReadAllText(file);
+            Console.WriteLine($"Here is the text: {date}");
+
             Console.ReadLine();
         }
     }
