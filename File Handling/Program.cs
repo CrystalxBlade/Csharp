@@ -11,7 +11,13 @@ namespace File_Handling
     {
         static void Main(string[] args)
         {
-            
+
+            string fpath = @"D:\C# codes\File Handling\Files";
+
+            Directory.CreateDirectory(fpath);
+
+            Console.WriteLine("Directory Created");
+
 
             Console.ReadLine();
         }
