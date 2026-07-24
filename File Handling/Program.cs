@@ -12,12 +12,25 @@ namespace File_Handling
         static void Main(string[] args)
         {
 
-            string fpath = @"D:\C# codes\File Handling\Files";
+            //======================================================
+            // 1. Create Directory
+            //======================================================
 
-            Directory.CreateDirectory(fpath);
+            string folderPath = @"D:\C# codes\File Handling\Files\Directory";
+
+            Directory.CreateDirectory(folderPath);
 
             Console.WriteLine("Directory Created");
 
+            //======================================================
+            // 2. Create File
+            //======================================================
+
+            string file = Path.Combine(folderPath, "Student.txt");
+
+            File.Create(file).Close();
+
+            Console.WriteLine("File Created");
 
             Console.ReadLine();
         }
