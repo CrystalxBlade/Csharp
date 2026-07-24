@@ -44,7 +44,14 @@ namespace File_Handling
             //======================================================
 
             string date = File.ReadAllText(file);
-            Console.WriteLine($"Here is the text: {date}");
+            Console.WriteLine($"Reading inside text: {date}");
+
+            //======================================================
+            // 5. Append Text
+            //======================================================
+
+            File.AppendAllText(file, "\n Second Line");
+            Console.WriteLine("Text Appended");
 
             Console.ReadLine();
         }
