@@ -22,6 +22,8 @@ namespace File_Handling
 
             Console.WriteLine("Directory Created");
 
+            Console.WriteLine();
+
             //======================================================
             // 2. Create File
             //======================================================
@@ -32,6 +34,8 @@ namespace File_Handling
 
             Console.WriteLine("File Created");
 
+            Console.WriteLine();
+
             //======================================================
             // 3. Write Text
             //======================================================
@@ -39,6 +43,7 @@ namespace File_Handling
             File.WriteAllText(file, "Hello form C#");
             Console.WriteLine("Text Written");
 
+            Console.WriteLine();
             //======================================================
             // 4. Read Text
             //======================================================
@@ -46,6 +51,7 @@ namespace File_Handling
             string date = File.ReadAllText(file);
             Console.WriteLine($"Reading inside text: {date}");
 
+            Console.WriteLine();
             //======================================================
             // 5. Append Text
             //======================================================
@@ -53,6 +59,7 @@ namespace File_Handling
             File.AppendAllText(file, "\n Second Line");
             Console.WriteLine("Text Appended");
 
+            Console.WriteLine();
             //======================================================
             // 6. Copy File
             //======================================================
@@ -61,9 +68,9 @@ namespace File_Handling
             File.Copy(file, copy, true);
             Console.WriteLine("File Copied");
 
-
+            Console.WriteLine();
             //======================================================
-            // 7. Check File Exists
+            // 8. Check File Exists
             //======================================================
 
             if (File.Exists(copy))
@@ -71,10 +78,11 @@ namespace File_Handling
                 Console.WriteLine("File Exists");
             }
 
+            Console.WriteLine();
             /* -----------------------------------------------------
 
             //======================================================
-            // 8. Move File
+            // 7. Move File
             //======================================================
 
             
@@ -87,15 +95,21 @@ namespace File_Handling
             // 9. Delete File
             //======================================================
 
-            -----------------------------------------------------  */
 
-            File.Delete(copy);
+            File.Delete(moved);
             Console.WriteLine("File Deleted");
 
-            if (File.Exists(copy))
-                Console.WriteLine("File Exists");
-            else
-                Console.WriteLine("Not Exists");
+            -----------------------------------------------------  */
+
+            //======================================================
+            // 10. Get File Information
+            //======================================================
+
+
+            Console.WriteLine($"File name: {Path.GetFileName(file)}");
+            Console.WriteLine($"Extension: {Path.GetExtension(file)}");
+            Console.WriteLine($"Directory: {Path.GetDirectoryName(file)}");
+            Console.WriteLine($"Without Extension: {Path.GetFileNameWithoutExtension(file)}");
 
             Console.ReadLine();
         }
