@@ -53,6 +53,50 @@ namespace File_Handling
             File.AppendAllText(file, "\n Second Line");
             Console.WriteLine("Text Appended");
 
+            //======================================================
+            // 6. Copy File
+            //======================================================
+
+            string copy = Path.Combine(folderPath, "Student_Copy.txt");
+            File.Copy(file, copy, true);
+            Console.WriteLine("File Copied");
+
+
+            //======================================================
+            // 7. Check File Exists
+            //======================================================
+
+            if (File.Exists(copy))
+            {
+                Console.WriteLine("File Exists");
+            }
+
+            /* -----------------------------------------------------
+
+            //======================================================
+            // 8. Move File
+            //======================================================
+
+            
+            string moved = Path.Combine(folderPath, "MovedStudent.txt");
+            File.Move(copy, moved);
+            Console.WriteLine("File Moved");
+            
+
+            //======================================================
+            // 9. Delete File
+            //======================================================
+
+            -----------------------------------------------------  */
+
+            File.Delete(copy);
+            Console.WriteLine("File Deleted");
+
+            if (File.Exists(copy))
+                Console.WriteLine("File Exists");
+            else
+                Console.WriteLine("Not Exists");
+
             Console.ReadLine();
         }
     }
