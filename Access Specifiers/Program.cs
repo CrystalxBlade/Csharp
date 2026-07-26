@@ -17,14 +17,32 @@ namespace Access_Specifiers
         {
             Console.WriteLine("Protected Method");
         }
-
         internal void Internal()
         {
             Console.WriteLine("Internal Method");
         }
-        protected internal ProtectedInternal()
+
+        public void ShowPrivate()
         {
-            Console.WriteLine("Protected Internal Method");
+            Private();
         }
     }
+     
+    class Two : Program
+    {
+        static void Main(string[] args)
+        {
+            Two obj = new Two();
+
+            obj.Protected();    // Protected method can be accessed because Two inherits Program
+
+            obj.Internal();     // Internal method can be accessed because it's in the same assembly
+
+            obj.ShowPrivate();  // Private method cannot be accessed directly
+
+
+            Console.ReadLine();
+        }
+    }
+
 }

@@ -17,3 +17,12 @@
 ### protected → Family room. Only family members (derived classes) can enter.
 ### internal → Your entire house. Anyone inside the house (same project) can access it, but outsiders cannot.
 ### protected internal → Anyone inside your house can enter, and family members can also enter even if they live in another house.
+
+
+
+| Access Modifier      | Same Class | Derived Class |     Same Assembly    |      Different Assembly      |
+| -------------------- | :--------: | :-----------: | :------------------: | :--------------------------: |
+| `private`            |      ✅     |       ❌       |           ❌          |               ❌              |
+| `protected`          |      ✅     |       ✅       | ❌ (unless inherited) |     ❌ (unless inherited)     |
+| `internal`           |      ✅     |       ✅       |           ✅          |               ❌              |
+| `protected internal` |      ✅     |       ✅       |           ✅          | ✅ (only through inheritance) |
