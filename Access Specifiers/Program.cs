@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Access_Specifiers
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private void Private()
         {
+            Console.WriteLine("Private Method");
         }
     }
 }

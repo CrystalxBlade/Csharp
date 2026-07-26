@@ -7,7 +7,7 @@
     <ProjectGuid>{285DF4A0-E348-40DE-B7A9-9986C2D106A4}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Access_Specifiers</RootNamespace>
-    <AssemblyName>Access_Specifiers</AssemblyName>
+    <AssemblyName>Access Specifiers</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
