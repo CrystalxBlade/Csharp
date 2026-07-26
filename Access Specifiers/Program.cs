@@ -12,5 +12,19 @@ namespace Access_Specifiers
         {
             Console.WriteLine("Private Method");
         }
+
+        protected void Protected()
+        {
+            Console.WriteLine("Protected Method");
+        }
+
+        internal void Internal()
+        {
+            Console.WriteLine("Internal Method");
+        }
+        protected internal ProtectedInternal()
+        {
+            Console.WriteLine("Protected Internal Method");
+        }
     }
 }
