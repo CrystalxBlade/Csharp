@@ -1,9 +1,4 @@
-﻿### Every application by default contains on thread to execute the program and that program is know as Main Thread, so every program is by default single thread model.
-
-
-
-
-# Multithreading in C#
+﻿# Multithreading in C#
 
 ## What is Multithreading?
 
@@ -12,6 +7,9 @@ Multithreading is the process of running **multiple threads (tasks)** inside a s
 A thread is the **smallest unit of execution** in a program.
 
 Instead of doing one task after another, multithreading allows multiple tasks to run concurrently.
+
+
+### Every application by default contains on thread to execute the program and that program is know as Main Thread, so every program is by default single thread model.
 
 ---
 
