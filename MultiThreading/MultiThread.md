@@ -1,0 +1,1 @@
+### Every application by default contains on thread to execute the program and that program is know as Main Thread, so every program is by default single thread model.
