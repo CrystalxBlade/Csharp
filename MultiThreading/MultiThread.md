@@ -421,3 +421,12 @@ instead of
 - `Thread` is the classic API.
 - `Task` is the modern and recommended approach.
 - `async`/`await` are built on top of `Task` for asynchronous programming.
+
+# Advantages
+
+## 1. Faster Program Execution ⚡
+## 2. Responsive Applications
+## 3. Better CPU Utilization
+## 4. Multiple Users at the Same Time
+## 5. Time Sharing
+
