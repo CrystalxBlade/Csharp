@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace MultiThreading
@@ -10,6 +11,12 @@ namespace MultiThreading
     {
         static void Main(string[] args)
         {
+            Thread t = Thread.CurrentThread;
+            t.Name = "Main Thread";
+            Console.WriteLine($"Current executing thread is: " +
+                $"{Thread.CurrentThread.Name}");
+ 
+            Console.ReadLine();
         }
     }
 }

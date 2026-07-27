@@ -20,7 +20,7 @@ namespace Access_Specifiers
         internal void Internal()
         {
             Console.WriteLine("Internal Method");
-        }
+        } 
 
         public void ShowPrivate()
         {
