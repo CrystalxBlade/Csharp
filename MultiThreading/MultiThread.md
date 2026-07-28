@@ -2,6 +2,11 @@
 
 ## What is Multithreading?
 
+Think of it like this:
+
+### Process = A running application (e.g., Chrome, Visual Studio).
+## Thread = A worker inside that application.
+
 Multithreading is the process of running **multiple threads (tasks)** inside a single application at the same time.
 
 A thread is the **smallest unit of execution** in a program.
