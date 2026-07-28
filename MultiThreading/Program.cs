@@ -11,6 +11,11 @@ namespace MultiThreading
     {
         /*
          
+        =========================================
+        1. Creating a Thread
+        =========================================
+         
+         
         static void PrintNumbers()
         {
             for(int i = 1; i <= 10; i++)
@@ -31,7 +36,9 @@ namespace MultiThreading
             Console.ReadLine();
         }
 
-        */
+        =========================================
+        2. Multiple Threads
+        =========================================
 
         static void PrintNumb()
         {
@@ -61,5 +68,7 @@ namespace MultiThreading
 
             Console.ReadLine();
         }
+
+        */
     }
 }
