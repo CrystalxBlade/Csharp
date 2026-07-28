@@ -9,6 +9,8 @@ namespace MultiThreading
 {
     class Program
     {
+        /*
+         
         static void PrintNumbers()
         {
             for(int i = 1; i <= 10; i++)
@@ -22,7 +24,40 @@ namespace MultiThreading
             Console.WriteLine("===== Creating Thread ===== \n");
 
             Thread t = new Thread(PrintNumbers);
+
             t.Start();
+            Console.WriteLine("Main Thread Finished");
+
+            Console.ReadLine();
+        }
+
+        */
+
+        static void PrintNumb()
+        {
+            for(int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine($"Thread 1 : {i}");
+                Thread.Sleep(500);
+            }
+        }
+
+        static void PrintLetters()
+        {
+            for (char ch = 'A'; ch <= 'Z'; ch++)
+            {
+                Console.WriteLine($"Thread 2 : {ch}");
+                Thread.Sleep(500);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Thread t1 = new Thread(PrintNumb);
+            Thread t2 = new Thread(PrintLetters);
+
+            t1.Start(); 
+            t2.Start(); 
 
             Console.ReadLine();
         }
