@@ -69,26 +69,33 @@ namespace MultiThreading
             Console.ReadLine();
         }
 
-        */
-        
-        static void PrintNumb()
-        {
+        ==================================================
+        3. Thread.Sleep()
+        ==================================================
 
+        */
+
+        static void SleepExample()
+        {
             for(int i = 1; i <= 10; i++)
             {
-                Console.WriteLine(i);
+                Console.WriteLine($"Count: {i}");
+
+                // Pause the current thread for 1 second
+                Thread.Sleep(1000);
             }
         }
 
         static void Main(string[] args)
         {
-            ThreadStart obj = new ThreadStart(PrintNumb);
+            Console.WriteLine("===== Thread.Sleep() =====\n");
 
-            Thread t = new Thread(obj);
+            SleepExample();
 
-            t.Start();
-            
+            Console.WriteLine("\nLoop Finished");
+
             Console.ReadLine();
         }
+
     }
 }
