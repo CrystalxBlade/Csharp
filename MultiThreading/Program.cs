@@ -14,8 +14,12 @@ namespace MultiThreading
         =========================================
         1. Creating a Thread
         =========================================
-         
-         
+        
+        
+        Definition:
+        A Thread is the smallest unit of execution inside a process.
+        
+        
         static void PrintNumbers()
         {
             for(int i = 1; i <= 10; i++)
@@ -73,7 +77,10 @@ namespace MultiThreading
         3. Thread.Sleep()
         ==================================================
 
-        
+
+        Definition:
+        Temporarily pauses the current thread for a specified amount of time.
+
 
         static void SleepExample()
         {
@@ -102,7 +109,10 @@ namespace MultiThreading
          4. Thread.Join()
         ==================================================
 
-        */
+
+        Definition:
+        Join() blocks the calling thread until the target thread finishes execution.
+
 
         static void PrintNumbers()
         {
@@ -130,5 +140,41 @@ namespace MultiThreading
 
             Console.ReadLine();
         }
+
+
+        ==================================================
+         5. Passing Parameters
+        ==================================================
+
+
+        static void PrintTable(object number)
+        {
+            int num = (int)number;
+
+            for(int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine($"{num} x {i} = {num * i}");
+                Thread.Sleep(300);
+            }
+        }
+
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("====== Passing Parameters =====\n");
+
+            Thread t = new Thread(PrintTable);
+
+            t.Start(5);
+
+            t.Join();
+
+            Console.WriteLine("\nThread Finished");
+
+            Console.ReadLine();
+
+        }
+
+        */
     }
 }
