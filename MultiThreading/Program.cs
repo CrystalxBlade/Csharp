@@ -97,7 +97,38 @@ namespace MultiThreading
             Console.ReadLine();
         }
 
+
+        ==================================================
+         4. Thread.Join()
+        ==================================================
+
         */
 
+        static void PrintNumbers()
+        {
+            for(int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine($"Worker thread: {i}");
+                Thread.Sleep(500);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("===== Thread Join =====\n");
+
+            Thread t = new Thread(PrintNumbers);
+
+            t.Start();
+
+            Console.WriteLine("Main thread is waiting...\n");
+
+            t.Join();    // Wait until PrintNumber() finishes
+
+            Console.WriteLine("\nWorker Thread Finished");
+            Console.WriteLine("Main Thread Finished");
+
+            Console.ReadLine();
+        }
     }
 }
