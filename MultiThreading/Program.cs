@@ -70,5 +70,25 @@ namespace MultiThreading
         }
 
         */
+        
+        static void PrintNumb()
+        {
+
+            for(int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            ThreadStart obj = new ThreadStart(PrintNumb);
+
+            Thread t = new Thread(obj);
+
+            t.Start();
+            
+            Console.ReadLine();
+        }
     }
 }
