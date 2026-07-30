@@ -180,7 +180,23 @@ namespace MultiThreading
         6. Foreground vs Background Thread
         ==================================================
 
-        */
+
+
+        Foreground Thread
+
+        Definition:
+        A Foreground Thread keeps the application running until it finishes execution.
+        
+        Default:
+        Every new thread is a Foreground Thread.
+        
+        Background Thread
+        
+        Definition:
+        A Background Thread automatically stops when all Foreground Threads have finished.
+
+
+        
 
         static void PrintNumbers()
         {
@@ -202,9 +218,11 @@ namespace MultiThreading
 
             t.Start();
 
-            Console.WriteLine("Main Thread Finished");
+            Console.WriteLine("Main Thread Finished \n");
 
             Console.ReadLine();
         }
+
+        */
     }
 }
