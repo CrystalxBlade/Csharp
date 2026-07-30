@@ -175,6 +175,36 @@ namespace MultiThreading
 
         }
 
+        
+        ==================================================
+        6. Foreground vs Background Thread
+        ==================================================
+
         */
+
+        static void PrintNumbers()
+        {
+            for(int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine($"Worker Thread : {i}");
+                Thread.Sleep(1000);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("===== Foreground vs Background Thread =====\n");
+
+            Thread t = new Thread(PrintNumbers);
+
+            // Make it a Background Thread
+            t.IsBackground = true;
+
+            t.Start();
+
+            Console.WriteLine("Main Thread Finished");
+
+            Console.ReadLine();
+        }
     }
 }
