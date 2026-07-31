@@ -223,7 +223,17 @@ namespace MultiThreading
             Console.ReadLine();
         }
 
-        */
+
+        ==================================================
+         7. Race Condition
+        ==================================================
+
+
+        Definition:
+
+        A Race Condition occurs when two or more threads access and 
+        modify shared data simultaneously, causing unpredictable results.
+
 
         class Bank
         {
@@ -255,5 +265,7 @@ namespace MultiThreading
                 Console.ReadLine();
             }
         }
+
+        */
     }
 }
