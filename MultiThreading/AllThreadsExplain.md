@@ -278,3 +278,103 @@ Leaves lock
 Final Counter = 7 ✅
 
 ```
+## Task
+
+```
+Task
+
+Definition:
+A Task represents an asynchronous operation.
+
+Namespace:
+using System.Threading.Tasks;
+
+Syntax:
+
+Task task = Task.Run(MethodName);
+
+Purpose:
+• Execute work asynchronously.
+• Improve application performance.
+• Keep applications responsive.
+
+Advantages:
+• Easier than Thread
+• Uses the Thread Pool
+• Better performance
+• Modern approach
+
+Task.Wait():
+Waits until the task finishes.
+
+Difference:
+
+Thread
+- Manual thread creation
+- Older API
+
+Task
+- High-level API
+- Recommended in modern C#
+
+```
+
+```
+Program
+     │
+     ▼
+Main Thread
+     │
+     ▼
+Task.Run()
+     │
+     ▼
+Thread Pool
+     │
+     ▼
+Executes PrintNumbers()
+     │
+     ▼
+Task Finished
+
+```
+
+### Why use Task instead of Thread?
+
+-Thread
+
+```
+Program
+    │
+    ▼
+Create Thread
+    │
+    ▼
+Start Thread
+    │
+    ▼
+Manage Thread Yourself
+
+```
+
+-Task
+
+```
+Program
+    │
+    ▼
+Task.Run()
+    │
+    ▼
+.NET Handles Everything
+
+```
+
+| Thread                                | Task                               |
+| ------------------------------------- | ---------------------------------- |
+| `Thread thread = new Thread(Method);` | `Task task = Task.Run(Method);`    |
+| `thread.Start();`                     | Starts automatically               |
+| `thread.Join();`                      | `task.Wait();`                     |
+| Creates a new thread                  | Uses the Thread Pool when possible |
+| More manual work                      | Easier to use                      |
+| Older approach                        | Modern approach                    |

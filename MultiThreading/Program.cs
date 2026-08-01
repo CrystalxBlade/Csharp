@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
 
 namespace MultiThreading
@@ -272,7 +273,11 @@ namespace MultiThreading
         ==================================================
 
 
-        */
+        lock Keyword
+
+        Definition:
+        The lock keyword ensures that only one thread can execute a block of code at a time.
+
 
         static int counter = 0;
 
@@ -309,5 +314,37 @@ namespace MultiThreading
 
             Console.ReadLine();
         }
+
+
+        ==================================================
+         9. Task
+        ==================================================
+
+        */
+
+        static void PrintNubmbers()
+        {
+            for(int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine($"Task : {i}");
+                Thread.Sleep(1000);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("===== Task =====\n");
+
+            Task task = Task.Run(PrintNubmbers);
+
+            Console.WriteLine("Main Thread is Running...\n");
+
+            task.Wait();
+
+            Console.WriteLine("\nTask Completed.");
+
+            Console.ReadLine();
+        }
+
     }
 }
