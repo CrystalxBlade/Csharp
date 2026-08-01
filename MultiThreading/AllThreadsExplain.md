@@ -341,7 +341,7 @@ Task Finished
 
 ### Why use Task instead of Thread?
 
--Thread
+- Thread
 
 ```
 Program
@@ -357,7 +357,7 @@ Manage Thread Yourself
 
 ```
 
--Task
+- Task
 
 ```
 Program
