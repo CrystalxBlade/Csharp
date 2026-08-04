@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 Task task = Task.Run(MethodName);
 
 ```
-## Waiting for a Task:
+### Waiting for a Task:
 
 ```
 task.Wait();
@@ -71,7 +71,7 @@ Wait 3 sec
 Continue
 
 ```
-### The main method is blocked.
+- The main method is blocked.
 
 ### With task:
 
@@ -93,4 +93,4 @@ Wait()
 End
 
 ```
-### The main method can continue doing other work while the task runs.
+- The main method can continue doing other work while the task runs.
