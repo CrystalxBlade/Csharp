@@ -19,7 +19,13 @@ namespace _6.TaskT
 
         static void Main(string[] args)
         {
-            SomeMethod();
+            Task t = Task.Run(SomeMethod);
+
+            Console.WriteLine("Task is Running...\n");
+
+            t.Wait();
+
+            Console.WriteLine("\nMain Method Exit");
 
             Console.ReadLine();
         }

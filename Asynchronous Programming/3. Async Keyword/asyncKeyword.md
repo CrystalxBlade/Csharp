@@ -9,13 +9,16 @@
 
 ## Syntax:
 
+```
 async Task MethodName()
 {
 }
 
+```
+
 ## Common Return Types:
 - Task
-- Task<T>
+- Task< T >
 
 ## Important:
 - async alone does not create a new thread.
