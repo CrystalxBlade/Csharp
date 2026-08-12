@@ -23,7 +23,7 @@ async Task MethodName()
 ## Important:
 - async alone does not create a new thread.
 - async is usually used together with await.
-- An async method typically returns Task or Task<T>.
+- An async method typically returns Task or Task< T >.
 
 
 ```

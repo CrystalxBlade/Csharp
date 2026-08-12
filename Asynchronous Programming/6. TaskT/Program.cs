@@ -8,27 +8,24 @@ namespace _6.TaskT
     class Program
     {
 
-        static void SomeMethod()
+        static async Task PrintMessage()
         {
-            for(int i = 1; i <= 10; i++)
-            {
-                Console.WriteLine($"Task: {i}");
-                Thread.Sleep(1000);
-            }
+            Console.WriteLine("Task started...");
+
+            await Task.Delay(3000);
+
+            Console.WriteLine("Task Finished");
         }
 
         static void Main(string[] args)
         {
-            Task t = Task.Run(SomeMethod);
+            Task t = PrintMessage();
 
-            Console.WriteLine("Task is Running...\n");
+            //t.Wait();
 
-            t.Wait();
-
-            Console.WriteLine("\nMain Method Exit");
+            Console.WriteLine("\nMain Method Finished");
 
             Console.ReadLine();
         }
-      
     }
 }
