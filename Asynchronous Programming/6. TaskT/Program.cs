@@ -8,24 +8,25 @@ namespace _6.TaskT
     class Program
     {
 
-        static async Task PrintMessage()
+       static async Task Download()
+       {
+            Console.WriteLine("Download Started...");
+
+            await Task.Delay(4000);
+
+            Console.WriteLine("Download Finished");
+       }
+
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Task started...");
+            Console.WriteLine("Before calling Download");
 
-            await Task.Delay(3000);
+            await Download();
 
-            Console.WriteLine("Task Finished");
-        }
-
-        static void Main(string[] args)
-        {
-            Task t = PrintMessage();
-
-            //t.Wait();
-
-            Console.WriteLine("\nMain Method Finished");
+            Console.WriteLine("After calling Download");
 
             Console.ReadLine();
         }
+        
     }
 }
