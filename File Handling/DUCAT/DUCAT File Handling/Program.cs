@@ -10,7 +10,7 @@ namespace DUCAT_File_Handling
         {
             Console.WriteLine("Enter The File Location/Name");
 
-            string file = "D:\\C# codes\\File Handling\\DUCAT\\Demo " +Console.ReadLine()+".txt";
+            string file = "D:\\C# codes\\File Handling\\DUCAT\\Demo\\"+Console.ReadLine()+".txt";
 
             //Console.WriteLine(file);
 
