@@ -34,26 +34,29 @@ namespace DUCAT_File_Handling
         */
 
 
-        public void ReadFile()
+        public void WriteFile()
         {
             Console.Write("Enter File Name: ");
 
             string file = @"D:\C# codes\File Handling\DUCAT\Demo\"+Console.ReadLine()+".txt";
 
-            FileStream fs = new FileStream(file, FileMode.Open, FileAccess.Read);
+            FileStream fs = new FileStream(file, FileMode.Append, FileAccess.Write);
 
-            StreamReader sr = new StreamReader(fs);
+            StreamWriter sw = new StreamWriter(fs);
 
-            sr.BaseStream.Seek(0, SeekOrigin.Begin);
+            Console.Write("Enter text: ");
 
-            string str = sr.ReadLine();
-            Console.WriteLine(str);
+            string str = Console.ReadLine();
+            sw.WriteLine(str);
+
+            sw.Flush();
+            sw.Close();
         }
 
         static void Main(string[] args)
         {
             Program p = new Program();
-            p.ReadFile();
+            p.WriteFile();
 
             Console.ReadLine();
         }
