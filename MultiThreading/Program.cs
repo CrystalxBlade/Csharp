@@ -332,7 +332,7 @@ namespace MultiThreading
         }
 
         static void Main(string[] args)
-        {
+        {  
             Console.WriteLine("===== Task =====\n");
 
             Task task = Task.Run(PrintNubmbers);
