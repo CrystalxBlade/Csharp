@@ -1,4 +1,4 @@
-# async Main
+﻿# async Main
 
 ## Definition:
 
@@ -47,3 +47,22 @@ Task = Main() performs asynchronous work
 - async Main() does not create a new thread.
 - Main() can directly use await.
 - Main() can return Task or Task<int>.
+
+
+
+
+
+static async Task Main()
+        │
+        ▼
+   await DownloadData()
+        │
+        ▼
+   Task.Delay(3000)
+        │
+        │  3 seconds
+        ▼
+ Download Finished
+        │
+        ▼
+ Program Finished
