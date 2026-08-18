@@ -8,25 +8,47 @@ namespace _6.TaskT
     class Program
     {
 
-       static async Task Download()
-       {
-            Console.WriteLine("Download Started...");
+        // ================= Task =================
 
-            await Task.Delay(4000);
+        static async Task PrintMessage()
+        {
+            await Task.Delay(1000);
+            Console.WriteLine(" Hello form Task!");
+        }
 
-            Console.WriteLine("Download Finished");
-       }
+        // ================= Task =================
+
+        static async Task<int> GetNumber()
+        {
+            await Task.Delay(2000);
+            return 100;
+        }
+
 
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Before calling Download");
+            Console.WriteLine("|===== Task<T> ===== | \n");
 
-            await Download();
+            Console.WriteLine(" ===== Task ===== ");
 
-            Console.WriteLine("After calling Download");
+            await PrintMessage();
 
+            Console.WriteLine();
+
+           // ========================================
+
+            Console.WriteLine("===== Task<int> =====");
+
+            int num = await GetNumber();
+
+            Console.WriteLine($"Number : {num}");
+
+            Console.WriteLine();
+
+            // ========================================
+
+            
             Console.ReadLine();
         }
-        
     }
 }
