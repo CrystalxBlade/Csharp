@@ -43,8 +43,7 @@ Continue
 
 ### Task.WhenAll() does NOT mean "create three threads."
 
-### It combines multiple Tasks and lets you await
-### their completion as a group.
+### It combines multiple Tasks and lets you await their completion as a group.
 
 
 ## Sequential:
@@ -62,9 +61,7 @@ await task3;
 await Task.WhenAll(task1, task2, task3);
 
 ```
-### WhenAll is useful when tasks are independent
-### and can run at the same time.
-
+### WhenAll is useful when tasks are independent and can run at the same time.
 
 
 ## What happens
