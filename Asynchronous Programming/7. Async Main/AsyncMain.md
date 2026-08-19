@@ -50,8 +50,7 @@ Task = Main() performs asynchronous work
 
 
 
-
-
+```
 static async Task Main()
         │
         ▼
@@ -66,3 +65,5 @@ static async Task Main()
         │
         ▼
  Program Finished
+
+```
