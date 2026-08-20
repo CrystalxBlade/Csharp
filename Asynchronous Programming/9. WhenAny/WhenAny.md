@@ -4,7 +4,7 @@ Task.WhenAny()
 
 ## Definition:
 
-###Task.WhenAny() waits for multiple Tasks and returns when the FIRST Task completes.
+### Task.WhenAny() waits for multiple Tasks and returns when the FIRST Task completes.
 
 ## Purpose:
 
