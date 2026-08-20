@@ -6,7 +6,7 @@ Exception Handling
 
 ### Use try-catch to handle exceptions from Tasks.
 
-### Example:
+## Example:
 
 ```
 try
@@ -41,7 +41,7 @@ Handle Exception
 
 ```
 
-### Important:
+## Important:
 
 - async methods can throw exceptions.
 - Use try-catch with await.
@@ -53,9 +53,9 @@ Handle Exception
 
 ## Common Exception Types:
 
-### Exception
-### TimeoutException
-### ArgumentException
-### ArgumentNullException
-### InvalidOperationException
-### IOException
+Exception
+TimeoutException
+ArgumentException
+ArgumentNullException
+InvalidOperationException
+IOException
