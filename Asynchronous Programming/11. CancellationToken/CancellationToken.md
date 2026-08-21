@@ -58,3 +58,66 @@ OperationCanceledException
 - CancellationTokenSource is used to request cancellation.
 - CancellationToken is passed to the operation.
 - OperationCanceledException can be caught when cancellation occurs.
+
+
+
+
+```
+          CancellationTokenSource
+                    │
+                    │
+              cts.Token
+                    │
+                    ▼
+          ┌─────────────────┐
+          │ Async Operation │
+          └────────┬────────┘
+                   │
+                   ▼
+             Doing Work...
+                   │
+                   │
+          cts.Cancel() called
+                   │
+                   ▼
+        Cancellation requested
+                   │
+                   ▼
+       Operation checks token
+                   │
+             ┌─────┴─────┐
+             │           │
+             ▼           ▼
+          Continue      Stop
+                         │
+                         ▼
+            OperationCanceledException
+                         │
+                         ▼
+                       catch
+
+```
+
+
+```
+CancellationTokenSource
+        ↓
+"I control cancellation."
+
+CancellationToken
+        ↓
+"Here's the cancellation signal."
+
+cts.Cancel()
+        ↓
+"Please stop."
+
+ThrowIfCancellationRequested()
+        ↓
+"Should I stop?"
+
+OperationCanceledException
+        ↓
+"The operation was cancelled."
+
+```
