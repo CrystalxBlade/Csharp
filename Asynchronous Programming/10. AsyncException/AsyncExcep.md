@@ -53,9 +53,36 @@ Handle Exception
 
 ## Common Exception Types:
 
-Exception
-TimeoutException
-ArgumentException
-ArgumentNullException
-InvalidOperationException
-IOException
+
+- Exception
+- TimeoutException
+- ArgumentException
+- ArgumentNullException
+- InvalidOperationException
+- IOException
+
+
+```
+       Async Operation
+             │
+             ▼
+       ┌───────────┐
+       │ Successful│
+       └─────┬─────┘
+             │
+             ▼
+          Continue
+
+             OR
+
+       ┌───────────┐
+       │   Error   │
+       └─────┬─────┘
+             │
+             ▼
+           catch
+             │
+             ▼
+          Handle
+
+```
